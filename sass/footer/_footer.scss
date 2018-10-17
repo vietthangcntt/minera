@@ -1,0 +1,106 @@
+#colophon {
+	background: $bg-header;
+}
+.subscribe-tit {
+	color: $color-gray;
+	font-family: $font;
+	font-size: 24px;
+	font-weight: $weight;
+	margin-bottom: 0;
+}
+
+.wpb_wrapper {
+	p {
+		color: $color-gray;
+		font-family: $font;
+		font-size: 14px;
+		font-weight: $weight;
+	}
+}
+
+#footer-button {
+	height: 50px;
+	width: 170px;
+	background: $color-black;
+	color: $color-white;
+	font-family: $font;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#footer-mail {
+	height: 50px;
+	text-indent: 15px;
+	width: 460px;
+	border: 1px solid #e8e8e8;
+}
+.footer-sup {
+	border-bottom: 1px solid #e8e8e8;
+    margin-top: 40px;
+    
+} 
+.footer-sub {     display: flex;     justify-content: space-between; }
+ #text-3 {     width: 41.66666667%;     float: left; }
+
+#custom_html-2 {     padding-top: 20px; }
+
+.site-inter {
+	clear: both;
+	margin-top: 30px;
+}
+
+.footer-social {
+	float: right;
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		a {
+			i {
+				color: $color-black;
+			}
+		}
+	}
+}
+span {
+	font-family: $font;
+	color: $color-gray;
+	font-size: 14px;
+	font-weight: $weight;
+    margin-right: 15px;
+    float: left;
+}
+.footer-menu {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		a {
+			font-family: $font;
+			color: $color-black;
+			font-size: 14px;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 0 15px;
+		}
+	}
+}
+
+.footer-sup {
+	.textwidget {
+		p {
+			font-family: $font;
+			font-weight: $weight;
+			font-size: 14px;
+			color: $color-gray;
+		}
+	}
+	.widgettitle {
+		font-family: $font;
+		font-size: 24px;
+		font-weight: $weight;
+		color: $color-black;
+	}
+}
