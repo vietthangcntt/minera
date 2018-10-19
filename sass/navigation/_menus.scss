@@ -218,3 +218,8 @@
     background-size: cover;
     background-position: bottom;
 }
+
+.breadcrumb-item+.breadcrumb-item::before {
+	content: '' !important;
+	font-family: $font-awe;
+}

@@ -1,0 +1,158 @@
+.social-share {
+	padding: 0 !important;
+	margin: 0 !important;
+	span {
+		color: $color-black;
+		font-family: $font;
+		font-size: 12px;
+	  margin-right: 80px;
+		font-weight: bold !important;
+	    text-transform: uppercase;
+
+		a {
+			color: $color-gray;
+			font-family: $font;
+			font-size: 12px;
+		}
+	}
+	li {
+		display: inline-block;
+		margin: 0 5px;
+		a {
+			i {
+				color: $color-gray;
+			}
+		}
+	}
+}
+
+.product_meta {
+	.sku_wrapper {
+		color: $color-black;
+		font-family: $font;
+		font-size: 12px;
+		font-weight: bold !important;
+	    text-transform: uppercase;
+
+	    .sku {
+    	    margin-left: 95px;
+	    }
+	}
+	.posted_in {
+		span {
+			color: $color-black;
+			font-family: $font;
+			font-size: 12px;
+			font-weight: bold !important;
+		    text-transform: uppercase;
+		    margin-right: 45px;
+		}
+		
+	}
+	.tagged_as {
+		span {
+			color: $color-black;
+			font-family: $font;
+			font-size: 12px;
+			font-weight: bold !important;
+		    text-transform: uppercase;
+		    margin-right: 87px;
+		}
+		
+	}
+}
+
+.posted_in a {
+	color: $color-gray;
+	font-size: 12px;
+	font-family: $font;
+    text-transform: uppercase;
+}
+
+.tagged_as a {
+	color: $color-gray;
+	font-size: 12px;
+	font-family: $font;
+    text-transform: uppercase;
+}
+
+.slider-nav {
+	button {
+		color: #fff !important;
+		background: #3333339e !important;
+		height: 30px;
+		width: 30px;
+
+	}
+	.slick-prev {
+	    left: 0;
+	    z-index: 1;
+		&:before {
+			content: "\f053";
+			font-family: $font-awe;
+		}
+		&:hover {
+			background: $color-black;
+			color: #fff;
+		}
+		&:focus {
+			background: $color-black;
+			color: #fff;
+		}
+	}
+	.slick-next {
+		right: 0 !important;
+		&:before {
+		    content: "\f054";
+		    font-family:  $font-awe;
+		}
+		&:hover {
+			background: $color-black;
+			color: #fff;
+		}
+		&:focus {
+			background: $color-black;
+			color: #fff;
+		}
+	}
+}
+
+.slick-dots {
+	display: none !important;
+}
+
+
+.thumb-up {
+	.thumb-item {
+		margin: 0 10px;
+	}
+}
+
+.woocommerce-tabs {
+	.tabs {
+		text-align: center;
+	}
+}
+
+.related {
+	h2 {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+}
+
+.stoclk {
+	color: $color-black;
+	font-family: $font;
+	font-size: 14px;
+	font-weight: bold !important;
+}
+
+.related {
+
+	ul {
+		li {
+			width: 25% !important;
+		}
+	}
+}

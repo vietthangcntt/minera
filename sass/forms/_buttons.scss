@@ -16,3 +16,36 @@ input[type="submit"] {
 	&:focus {
 	}
 }
+
+.cart {
+	.single_add_to_cart_button {
+		background: $color-black;
+		color: #fff !important;
+		border-radius: 0 !important;
+		height: 40px;
+		margin-left: 10px !important;
+	}
+}
+
+.quantity {
+	position: relative;
+	button {
+		height: 40px;
+		border: none;
+		background-color: transparent;
+		i {
+			color: $color-gray;
+			font-size: 14px;
+		}
+	}
+	.plus-btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.minus-btn {
+		position: absolute;
+		top: 0;
+		right : 0;
+	}
+}  

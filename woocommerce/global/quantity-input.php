@@ -29,8 +29,9 @@ if ( $max_value && $min_value === $max_value ) {
 	?>
 	<div class="quantity">
 		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
+		<button class="plus-btn" type="button" name="button" id="dec-button"><i class="fa fa-minus" aria-hidden="true"></i></button>
 		<input
-			type="number"
+			type="numbe"
 			id="<?php echo esc_attr( $input_id ); ?>"
 			class="input-text qty text"
 			step="<?php echo esc_attr( $step ); ?>"
@@ -43,6 +44,7 @@ if ( $max_value && $min_value === $max_value ) {
 			pattern="<?php echo esc_attr( $pattern ); ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"
 			aria-labelledby="<?php echo esc_attr( $labelledby ); ?>" />
+		<button class="minus-btn" type="button" name="button" id="inc-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
 	</div>
 	<?php
 }

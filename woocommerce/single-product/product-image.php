@@ -24,7 +24,10 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 }
 
 global $product;
+// print "<pre>";
+// var_dump($product);
 
+$attachment_ids = $product->get_gallery_image_ids();
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
@@ -33,21 +36,52 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
 ) );
+	
+	// print_r($attachment_ids);
 ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
-		if ( has_post_thumbnail() ) {
-			$html  = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src() ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
+ <div class="woocommerce-product-gallery images">
+ 	<div class="slider-for">
+ 		<?php
+ 			$gallery_thumbnail = wc_get_image_size('gallery_thumbnail');
+ 			$thumbnail_size    = apply_filters('woocommerce_gallery_thumbnail_size' , array ( $gallery_thumbnail['width'] , $gallery_thumbnail['height'] ));
+ 			$image_size        = apply_filters( 'woocommerce_gallery_thumnail_size' , array (370,370) );
+			// var_dump($gallery_thumbnail);
+ 			if ( $attachment_ids && has_post_thumbnail() ) {
+
+ 				foreach ( $attachment_ids as $key => $attachment_id ) {
+ 					$image_src     = wp_get_attachment_image_src( $attachment_id , $image_size);
+ 					$thumbnail_src = wp_get_attachment_image_src ( $attachment_id , $image_size);
+ 					// var_dump($image_src);
+				?>
+					<div class="image-up">
+						<div class="image-item">
+							<img src="<?php echo $image_src[0] ?>" alt="images product" class="complete">
+						</div>
+					</div>
+				<?php
 		}
+ 			}
+ 		?>
+ 	</div>
+ 	<div class="slider-nav">
+ 		<?php
+ 			if ( $attachment_ids && has_post_thumbnail() ) {
+ 				foreach ( $attachment_ids as $key => $attachment_id ) {
+ 					$image_src = wp_get_attachment_image_src( $attachment_id );
+ 					$thumbnail_src = wp_get_attachment_image_src ( $attachment_id , $thumbnail_size);
 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
+ 					?>
+ 						<div class="pro-thumb">
+ 							<div class="thumb-up">
+ 								<div class="thumb-item">
+ 									<img src="<?php echo $thumbnail_src[0] ?>" alt="images product">
+ 								</div>
+ 							</div>
+ 						</div>
 
-		do_action( 'woocommerce_product_thumbnails' );
-		?>
-	</figure>
-</div>
+ 					<?php
+ 				}
+ 			}
+ 		 ?>
+ 	</div>
+ </div>

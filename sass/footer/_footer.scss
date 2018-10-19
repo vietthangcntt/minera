@@ -26,6 +26,7 @@
 	font-family: $font;
 	font-size: 14px;
 	cursor: pointer;
+	margin-left: -20px;
 }
 
 #footer-mail {
@@ -69,7 +70,6 @@ span {
 	font-size: 14px;
 	font-weight: $weight;
     margin-right: 15px;
-    float: left;
 }
 .footer-menu {
 	padding: 0;

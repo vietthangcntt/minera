@@ -449,6 +449,31 @@ input[type="submit"] {
   line-height: 1;
   padding: .6em 1em .4em; }
 
+.cart .single_add_to_cart_button {
+  background: #333 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  height: 40px;
+  margin-left: 10px !important; }
+
+.quantity {
+  position: relative; }
+  .quantity button {
+    height: 40px;
+    border: none;
+    background-color: transparent; }
+    .quantity button i {
+      color: #8f8f8f !important;
+      font-size: 14px; }
+  .quantity .plus-btn {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .quantity .minus-btn {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -470,6 +495,10 @@ textarea {
 
 textarea {
   width: 100%; }
+
+.quantity input {
+  height: 40px !important;
+  width: 110px !important; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -633,6 +662,10 @@ a:hover, a:active {
   height: 240px;
   background-size: cover;
   background-position: bottom; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '' !important;
+  font-family: FontAwesome; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -5116,7 +5149,8 @@ footer
   color: #fff !important;
   font-family: "Poppins" !important;
   font-size: 14px;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: -20px; }
 
 #footer-mail {
   height: 50px;
@@ -5158,8 +5192,7 @@ span {
   color: #8f8f8f !important;
   font-size: 14px;
   font-weight: 400 !important;
-  margin-right: 15px;
-  float: left; }
+  margin-right: 15px; }
 
 .footer-menu {
   padding: 0;
@@ -5185,5 +5218,184 @@ span {
   font-size: 24px;
   font-weight: 400 !important;
   color: #333 !important; }
+
+/*
+content
+ */
+.woocommerce .columns-4 li {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  float: left !important;
+  margin: 0 !important; }
+  .woocommerce .columns-4 li img {
+    max-width: 100% !important;
+    width: auto !important; }
+
+#main {
+  width: 1903px;
+  padding-right: 80px !important;
+  padding-left: 80px !important; }
+
+.p-head {
+  float: left;
+  margin-right: 30px; }
+
+.p-content {
+  float: left; }
+
+.woocommerce-loop-product__title a {
+  font-family: "Poppins" !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  font-size: 20px; }
+
+.woocommerce-Price-amount {
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important;
+  font-size: 24px;
+  font-weight: 300 !important;
+  margin-top: 20px; }
+
+.woocommerce-Price-currencySymbol {
+  font-size: 24px;
+  margin-right: 0 !important; }
+
+.p-content .add_to_cart_button {
+  background: #333 !important;
+  color: #fff !important;
+  border-radius: 0 !important; }
+
+.description-product {
+  width: 500px;
+  margin-bottom: 45px;
+  font-family: "Poppins" !important;
+  font-weight: 400 !important;
+  font-size: 14px;
+  color: #8f8f8f !important;
+  margin-top: 40px; }
+
+.woocommerce-pagination ul {
+  border: none !important; }
+  .woocommerce-pagination ul li {
+    width: unset !important;
+    border: none !important; }
+    .woocommerce-pagination ul li .current {
+      color: red !important;
+      background: transparent !important; }
+    .woocommerce-pagination ul li a:hover {
+      color: red !important;
+      background: transparent !important; }
+
+.products li {
+  width: 50% !important; }
+
+/*
+single
+ */
+.social-share {
+  padding: 0 !important;
+  margin: 0 !important; }
+  .social-share span {
+    color: #333 !important;
+    font-family: "Poppins" !important;
+    font-size: 12px;
+    margin-right: 80px;
+    font-weight: bold !important;
+    text-transform: uppercase; }
+    .social-share span a {
+      color: #8f8f8f !important;
+      font-family: "Poppins" !important;
+      font-size: 12px; }
+  .social-share li {
+    display: inline-block;
+    margin: 0 5px; }
+    .social-share li a i {
+      color: #8f8f8f !important; }
+
+.product_meta .sku_wrapper {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 12px;
+  font-weight: bold !important;
+  text-transform: uppercase; }
+  .product_meta .sku_wrapper .sku {
+    margin-left: 95px; }
+.product_meta .posted_in span {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 12px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  margin-right: 45px; }
+.product_meta .tagged_as span {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 12px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  margin-right: 87px; }
+
+.posted_in a {
+  color: #8f8f8f !important;
+  font-size: 12px;
+  font-family: "Poppins" !important;
+  text-transform: uppercase; }
+
+.tagged_as a {
+  color: #8f8f8f !important;
+  font-size: 12px;
+  font-family: "Poppins" !important;
+  text-transform: uppercase; }
+
+.slider-nav button {
+  color: #fff !important;
+  background: #3333339e !important;
+  height: 30px;
+  width: 30px; }
+.slider-nav .slick-prev {
+  left: 0;
+  z-index: 1; }
+  .slider-nav .slick-prev:before {
+    content: "\f053";
+    font-family: FontAwesome; }
+  .slider-nav .slick-prev:hover {
+    background: #333 !important;
+    color: #fff; }
+  .slider-nav .slick-prev:focus {
+    background: #333 !important;
+    color: #fff; }
+.slider-nav .slick-next {
+  right: 0 !important; }
+  .slider-nav .slick-next:before {
+    content: "\f054";
+    font-family: FontAwesome; }
+  .slider-nav .slick-next:hover {
+    background: #333 !important;
+    color: #fff; }
+  .slider-nav .slick-next:focus {
+    background: #333 !important;
+    color: #fff; }
+
+.slick-dots {
+  display: none !important; }
+
+.thumb-up .thumb-item {
+  margin: 0 10px; }
+
+.woocommerce-tabs .tabs {
+  text-align: center; }
+
+.related h2 {
+  text-align: center;
+  margin-bottom: 50px; }
+
+.stoclk {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 14px;
+  font-weight: bold !important; }
+
+.related ul li {
+  width: 25% !important; }
 
 /*# sourceMappingURL=style.css.map */
