@@ -51,4 +51,15 @@
 		<?php echo minera_product(); ?>
 	</header><!-- #masthead -->
 
+	<div id="form-search-product" class="form-search-fw">
+		<span class="close-btn" id="close-btn"><i class="fa fa-close"></i></span>
+		<div class="search-content">
+			<form action="<?php echo esc_url( home_url() ); ?>">
+				<input type="search" name="s" value="" class="search-product" placeholder="Hit enter to search or ESC to close">
+				<input type="hidden" value="product" name="post-type">
+			</form>
+		</div>
+
+	</div>
+
 	<div id="content" class="site-content">

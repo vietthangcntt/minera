@@ -28,16 +28,15 @@
 		</div><!-- .site-info -->
 		<div class="site-inter">
 			<div class="footer-sub container">
-				<?php the_custom_logo(); ?>
-
-				<?php 	
-					if(is_active_sidebar('footer-sidebar-2')){
-						dynamic_sidebar('footer-sidebar-2');
-					}
-					else{
-						_e('No Sidebar');
-					} 
-				?>
+					<?php the_custom_logo(); ?>
+					<?php 	
+						if(is_active_sidebar('footer-sidebar-2')){
+							dynamic_sidebar('footer-sidebar-2');
+						}
+						else{
+							_e('No Sidebar');
+						} 
+					?>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

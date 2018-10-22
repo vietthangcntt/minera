@@ -123,7 +123,9 @@ header-shop-car
 if ( ! function_exists( 'minera_shop_header' ) ) {
   function minera_shop_header() {?>
 	<div class="header-action hd1-action">
-		<button class="search-btn" id="ht-search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+		<div class="search">
+			<button class='btn btn-search' id="btn-search-product"><i class="fa fa-search" aria-hidden="true"></i></button>
+		</div>
 		<div class="user-btn">
 		<a href="#" class="login-btn"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 			<ul class="w-head-action">
@@ -218,7 +220,6 @@ add description product
 		}
 	}
 	add_action( 'woocommerce_after_shop_loop_item', 'minera_description_product', 6 );
-
 
 $sidebar_footer=[
 	  'name'=> __('Footer-Sidebar','minera'),

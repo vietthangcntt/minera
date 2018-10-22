@@ -594,6 +594,47 @@ textarea {
   height: 40px !important;
   width: 110px !important; }
 
+#form-search-product {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  display: none;
+  top: 0;
+  color: #333 !important;
+  background-color: #333333ad;
+  font-size: 30px; }
+  #form-search-product .search-content {
+    width: 80%;
+    margin: 0 auto; }
+    #form-search-product .search-content form {
+      width: 100%;
+      padding: 150px 0; }
+      #form-search-product .search-content form input {
+        width: 100%;
+        height: 100px;
+        padding: 20px;
+        background: none;
+        font-size: 30px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 3px solid #e8e8e8;
+        outline: 0;
+        color: #333 !important; }
+  #form-search-product .close-btn {
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    color: #fff; }
+
+.search .btn-search {
+  background: transparent;
+  border: none; }
+
+.search-product::placeholder {
+  color: #333 !important; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -5272,7 +5313,6 @@ footer
 
 #footer-button {
   height: 50px;
-  width: 170px;
   background: #333 !important;
   color: #fff !important;
   font-family: "Poppins" !important;
@@ -5288,14 +5328,14 @@ footer
 
 .footer-sup {
   margin-top: 40px;
-  padding-left: 0;
-  padding-right: 0; }
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 .footer-sub {
   display: flex;
   justify-content: space-between;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   border-top: 1px solid #e8e8e8;
   padding-top: 50px; }
 
@@ -5374,7 +5414,7 @@ footer
 
 #custom_html-2 {
   float: right;
-  width: 54%; }
+  width: 53%; }
 
 /*
 content
@@ -5544,7 +5584,15 @@ single
 
 .related h2 {
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  font-family: "Poppins" !important;
+  color: #333 !important; }
+
+.tabs .wc-tabs .active {
+  background: red !important; }
+  .tabs .wc-tabs .active a {
+    color: red !important;
+    font-weight: bold; }
 
 .stoclk {
   color: #333 !important;
@@ -5569,11 +5617,34 @@ single
       font-size: 14px;
       font-weight: 400 !important; }
 
+.woocommerce div.product p.stock {
+  margin-top: 20px !important;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 0 25px 0; }
+  .woocommerce div.product p.stock .number {
+    margin-left: 40px; }
+
+.woocommerce-product-details__short-description {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 30px 0 10px 0; }
+  .woocommerce-product-details__short-description p {
+    color: #8f8f8f !important;
+    font-size: 14px;
+    font-family: "Poppins" !important;
+    font-weight: 400 !important; }
+
 .woocommerce-cart-form__cart-item td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 0 !important; }
   .woocommerce-cart-form__cart-item td a {
     padding: 50px 0 !important; }
+
+.woocommerce-tabs .wc-tabs li.active a {
+  color: #333 !important;
+  font-weight: bold !important; }
+
+.woocommerce-loop-product__title {
+  text-align: left !important; }
 
 .product-name a {
   color: #333 !important;
@@ -5597,6 +5668,23 @@ single
   font-family: "Poppins" !important;
   font-weight: 400 !important;
   color: #333 !important; }
+
+.tagged_as a:hover {
+  color: #007bff !important;
+  text-decoration: none; }
+
+.woocommerce-product-rating .woocommerce-review-link {
+  font-family: "Poppins" !important;
+  font-weight: 400 !important;
+  color: #8f8f8f !important;
+  font-size: 14px; }
+
+.posted_in a:hover {
+  color: #007bff !important;
+  text-decoration: none; }
+
+.comment-form-rating .stars {
+  width: 80px; }
 
 .woocommerce a.remove {
   color: #8f8f8f !important; }
@@ -5628,6 +5716,12 @@ single
       color: #333 !important;
       font-weight: bold !important;
       border: none !important; }
+
+.woocommerce-Tabs-panel--description p {
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important;
+  font-size: 14px;
+  font-weight: 400 !important; }
 
 /*
 cart
@@ -5747,9 +5841,7 @@ login
 
 .wpcf7-list-item {
   margin-left: 0 !important;
-  margin: 15px 0 !important;
-  padding-left: 0;
-  padding-right: 0; }
+  margin: 15px 0 !important; }
 
 .login {
   width: 370px;

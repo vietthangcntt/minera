@@ -1,4 +1,8 @@
 (function ($) {
+
+/*
+quantity
+*/
     $(document).ready(function() {
         jQuery('.quantity').each(function() {
             var spinner = jQuery(this),
@@ -33,7 +37,22 @@
             });
         });
     });
+/*
+form search header js
+*/
+$(document).ready(function() {
+  $( '#btn-search-product' ).on( 'click', function(){
+    $( '#form-search-product' ).css({ 'display': 'block' });
+    $( '.search-product' ).focus();
+  } );
+  $( '#close-btn' ).on( 'click', function(){
+    $( '#form-search-product' ).css({ 'display': 'none' });
+  } );
+});
 
+/*
+slider
+*/
     $(document).ready(function() {
          jQuery('.slider-for').slick({
           slidesToShow: 1,

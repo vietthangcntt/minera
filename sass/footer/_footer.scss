@@ -20,7 +20,6 @@
 
 #footer-button {
 	height: 50px;
-	width: 170px;
 	background: $color-black;
 	color: $color-white;
 	font-family: $font;
@@ -37,15 +36,15 @@
 }
 .footer-sup {
     margin-top: 40px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     
 } 
 .footer-sub {     
 	display: flex;     
 	justify-content: space-between;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     border-top: 1px solid #e8e8e8;
     padding-top: 50px;
     }
@@ -147,5 +146,5 @@
 
 #custom_html-2 {
     float: right;
-    width: 54%;
+    width: 53%;
 }
