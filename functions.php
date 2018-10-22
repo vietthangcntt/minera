@@ -41,6 +41,7 @@ if ( ! function_exists( 'minera_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'woocommerce' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -123,7 +124,12 @@ if ( ! function_exists( 'minera_shop_header' ) ) {
   function minera_shop_header() {?>
 	<div class="header-action hd1-action">
 		<button class="search-btn" id="ht-search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+		<div class="user-btn">
 		<a href="#" class="login-btn"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+			<ul class="w-head-action">
+				<li><a href="http://localhost/minera/login-register/" class="text-center">Login / Register</a></li>
+			</ul>
+		</div>
 		<div class="shopping-cart" data-label="Cart">
 			<a class="shopping-cart-icon" href="<?php echo wc_get_cart_url() ?>" title="View your shopping cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="counter-cart"><?php echo WC()->cart->get_cart_contents_count() ?></span></a>
 		</div>
@@ -153,10 +159,11 @@ if (! function_exists('minera_home')) {
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Shop'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Product Listing - Grid</span></li>
 			</ul>
+
 	  	<?php }
 		if (is_cart()) { ?>
 			<h1 class="title-header left">Shopping Cart</h1>
-			<ul class="crumbs">
+			<ul class="crumbs left">
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href=" <?php echo esc_url( $home ); ?>">Home</a></li>
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Shop'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Cart</span></li>
@@ -164,12 +171,21 @@ if (! function_exists('minera_home')) {
 		<?php }
 		if (is_checkout()) { ?>
 			<h1 class="title-header left">Shopping Cart</h1>
-			<ul class="crumbs">
+			<ul class="crumbs left">
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href=" <?php echo esc_url( $home ); ?>">Home</a></li>
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Shop'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Cart</span></li>
 			</ul>
 		<?php }
+
+		if (is_page_template()) { ?>
+			<h1 class="title-header left">Login/Register</h1>
+			<ul class="crumbs left">
+				<li class="breadcrumb-item"><a class="breadcrumb-link" href=" <?php echo esc_url( $home ); ?>">Home</a></li>
+				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Pages'); ?></a></li>
+				<li class="breadcrumb-item"><span class="breadcrumb-label">Login/Register</span></li>
+			</ul>
+		<?php } 
 	}
 }
 if (! function_exists('minera_product')) {

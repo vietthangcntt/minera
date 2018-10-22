@@ -223,3 +223,46 @@
 	content: '' !important;
 	font-family: $font-awe;
 }
+
+.w-head-action {
+	margin-bottom: 0px;
+    padding: 10px 20px;
+	background: transparent;
+    position: absolute;
+    opacity: 0;
+    top: 110%;
+    visibility: hidden;
+    left: -100px;
+    min-width: 180px;
+    border: 1px solid #e8e8e8;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition: top 0.3s ease 0s,opacity 0.3s;
+    transition: top 0.3s ease 0s,opacity 0.3s;
+
+    li {
+    	a {
+    		color: $color-black;
+    		font-family: $font;
+    		font-size: 14px;
+    		font-weight: $weight;
+
+    		&:hover {
+    			color: #a9803c !important;
+    		}
+    	}
+    }
+}
+
+.user-btn {
+    margin-right: 20px;
+    position: relative;
+}
+
+.user-btn:hover .w-head-action {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}

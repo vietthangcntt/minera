@@ -29,6 +29,7 @@ input[type="submit"] {
 
 .quantity {
 	position: relative;
+	width: 110px;
 	button {
 		height: 40px;
 		border: none;
@@ -48,4 +49,133 @@ input[type="submit"] {
 		top: 0;
 		right : 0;
 	}
-}  
+}
+
+
+.actions {
+	button {
+		color: #fff !important;
+		background: $color-black;
+		border: none;
+		border-radius: 0 !important;
+	}
+
+	.input-text {
+		width: 160px !important;
+	}
+}
+
+.wc-proceed-to-checkout {
+	a {
+		background: $color-black;
+		color: #fff !important;
+	}
+}
+
+.form-row {
+	display: block !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	top: 100% !important;
+} 
+
+.form-submit {
+	clear: both;
+	.submit {
+		color: #fff !important;
+		background: $color-black;
+		border: none;
+		border-radius: 0 !important;
+		margin-top: 30px !important;
+	}
+} 
+
+.comment-form-comment {
+	label {
+		margin: 15px 0;
+		font-size: 14px;
+		font-family: $font;
+		color: $color-black;
+	}
+	#comment {
+		height: 140px !important;
+		border: 1px solid #e8e8e8;
+		border-radius: 0 !important;
+	}
+}
+
+.comment-form-author {
+	label {
+		margin: 15px 0;
+		font-size: 14px;
+		font-family: $font;
+		color: $color-black;
+	}
+	float: left;
+    display: grid;
+    padding-left: 0 !important;
+	#author {
+		height: 40px;
+		border: 1px solid #e8e8e8;
+		border-radius: 0 !important;
+	}
+}
+
+.comment-form-email {
+	label {
+		margin: 15px 0;
+		font-size: 14px;
+		font-family: $font;
+		color: $color-black;
+	}
+    float: right;
+    display: grid;
+    padding-right: 0 !important;
+	#email {
+		height: 40px;
+		border: 1px solid #e8e8e8;
+		border-radius: 0 !important;
+	}
+}
+
+.comment-form-rating {
+	label {
+		margin: 15px 0;
+		font-size: 14px;
+		font-family: $font;
+		color: $color-black;
+	}
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+	width: 70px !important;
+	height: 70px !important;
+	border-radius: 50% !important;
+	margin-top: 17px !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist {
+	padding: 0 !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: -15px 0 0 80px !important;
+    border: none !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist li {
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+    padding: 20px 0 !important;
+}
+
+#commentform {
+	margin-top: 40px;
+}
+
+.comment-form-rating {
+	.stars {
+		margin: 15px 0;
+	}
+}
