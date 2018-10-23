@@ -644,7 +644,9 @@ textarea {
 a:focus {
   outline: thin dotted; }
 a:hover, a:active {
-  outline: 0; }
+  outline: 0;
+  color: #a9803c !important;
+  text-decoration: none !important; }
 
 /*--------------------------------------------------------------
 ## Menus
