@@ -26,7 +26,7 @@
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+
 				}
 			}
 
@@ -265,4 +265,15 @@
     top: 100%;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
+}
+
+.main-navigation ul ul {
+	background: #fff;
+	border: 1px solid #e8e8e8;
+}
+
+.main-navigation ul ul li a {
+	padding: 0 20px;
+	line-height: 50px;
+
 }

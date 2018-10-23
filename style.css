@@ -671,8 +671,6 @@ a:hover, a:active {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
@@ -837,6 +835,14 @@ a:hover, a:active {
   top: 100%;
   -webkit-transform: scaleY(1);
   transform: scaleY(1); }
+
+.main-navigation ul ul {
+  background: #fff;
+  border: 1px solid #e8e8e8; }
+
+.main-navigation ul ul li a {
+  padding: 0 20px;
+  line-height: 50px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -5442,6 +5448,12 @@ content
 .p-content {
   float: left; }
 
+.woocommerce a.added_to_cart {
+  background: #333 !important;
+  padding: 6px 15px;
+  color: #fff;
+  font-weight: bold; }
+
 .woocommerce-loop-product__title a {
   font-family: "Poppins" !important;
   font-weight: 400 !important;
@@ -5931,6 +5943,7 @@ login
 .sp-footer {
   font-family: "Poppins" !important;
   font-weight: 400 !important;
+  float: left;
   font-size: 14px;
   color: #8f8f8f !important; }
 

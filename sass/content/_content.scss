@@ -27,6 +27,13 @@
 	float: left;
 }
 
+.woocommerce a.added_to_cart {
+    background: $color-black;
+    padding: 6px 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
 .woocommerce-loop-product__title {
 	a {
 		font-family: $font;

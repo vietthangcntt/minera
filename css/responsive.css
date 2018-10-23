@@ -58,6 +58,16 @@
 	.login {
 		width: auto;
 	}
+	.main-navigation ul ul {
+		background: #333;
+	}
+
+	.main-navigation ul ul li ul {
+		left: auto;
+		top: 100% !important;
+		z-index: 1010;
+		position: relative;
+	}
 
 	.main-header .custom-logo-link {
 		margin-top: 0;
