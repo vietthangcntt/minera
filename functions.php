@@ -127,10 +127,7 @@ if ( ! function_exists( 'minera_shop_header' ) ) {
 			<button class='btn btn-search' id="btn-search-product"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
 		<div class="user-btn">
-		<a href="#" class="login-btn"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-			<ul class="w-head-action">
-				<li><a href="http://localhost/minera/login-register/" class="text-center">Login / Register</a></li>
-			</ul>
+		<a href="<?php echo esc_html(get_permalink(get_option('woocommerce_myaccount_page_id'))); ?>" class="login-btn"><i class="fa fa-user-o" aria-hidden="true"></i></a>
 		</div>
 		<div class="shopping-cart" data-label="Cart">
 			<a class="shopping-cart-icon" href="<?php echo wc_get_cart_url() ?>" title="View your shopping cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="counter-cart"><?php echo WC()->cart->get_cart_contents_count() ?></span></a>
@@ -138,6 +135,29 @@ if ( ! function_exists( 'minera_shop_header' ) ) {
 	</div>
   <?php }
 }
+
+
+/**
+Logo
+*/
+	if (!function_exists('minera_logo')) {
+		function minera_logo() {
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			if($custom_logo_id){
+				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				$image_src=$image[0];
+			}
+			else{
+				$image_src=get_template_directory_uri().'/image/logo.png';
+			}
+			?>
+			<div class="logo">
+				<a href="<?php echo home_url('/'); ?>"><img src="<?php echo $image_src; ?>" alt="Logo"></a>
+			</div>
+
+		<?php }
+	}
+/**
 
 
 /**
@@ -170,6 +190,7 @@ if (! function_exists('minera_home')) {
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Shop'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Cart</span></li>
 			</ul>
+			<div class="bread-spacing-bot"></div>
 		<?php }
 		if (is_checkout()) { ?>
 			<h1 class="title-header left">Shopping Cart</h1>
@@ -178,6 +199,7 @@ if (! function_exists('minera_home')) {
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Shop'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Cart</span></li>
 			</ul>
+			<div class="bread-spacing-bot"></div>
 		<?php }
 
 		if (is_page_template()) { ?>
@@ -187,19 +209,20 @@ if (! function_exists('minera_home')) {
 				<li class="breadcrumb-item"><a class="breadcrumb-link" href="#"><?php echo esc_html( 'Pages'); ?></a></li>
 				<li class="breadcrumb-item"><span class="breadcrumb-label">Login/Register</span></li>
 			</ul>
+			<div class="bread-spacing-bot"></div>
 		<?php } 
 	}
 }
 if (! function_exists('minera_product')) {
 	function minera_product() { 
 		if (is_shop() ) {
-		?>
-		<div class="bread-spacing-bot"></div>
-	<?php }
+			?>
+				<div class="bread-spacing-bot"></div>
+			<?php }
 
 		if (is_single() ) {
 			?>
-			<div class="bread-spacing-bot"></div>
+				<div class="bread-spacing-bot"></div>
 			<?php }
 
 	}

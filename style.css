@@ -635,6 +635,16 @@ textarea {
 .search-product::placeholder {
   color: #333 !important; }
 
+.woocommerce-form .woocommerce-form-login .login {
+  border: none; }
+
+.woocommerce-LostPassword .lost_password a {
+  color: #96588a; }
+
+.woocommerce-Input .woocommerce-Input--text .input-text {
+  background-color: #f2f2f2;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125); }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -843,6 +853,13 @@ a:hover, a:active {
 .main-navigation ul ul li a {
   padding: 0 20px;
   line-height: 50px; }
+
+.container-fluid {
+  padding-left: 80px !important;
+  padding-right: 80px !important; }
+
+.woocommerce-MyAccount-content a {
+  color: #96588a; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -5436,8 +5453,10 @@ content
     max-width: 100% !important;
     width: auto !important; }
 
+#content {
+  padding: 70px 0; }
+
 #main {
-  width: 1903px;
   padding-right: 80px !important;
   padding-left: 80px !important; }
 
@@ -5446,7 +5465,8 @@ content
   margin-right: 30px; }
 
 .p-content {
-  float: left; }
+  float: left;
+  max-width: 340px; }
 
 .woocommerce a.added_to_cart {
   background: #333 !important;
@@ -5477,7 +5497,6 @@ content
   border-radius: 0 !important; }
 
 .description-product {
-  width: 500px;
   margin-bottom: 45px;
   font-family: "Poppins" !important;
   font-weight: 400 !important;
@@ -5497,8 +5516,56 @@ content
       color: red !important;
       background: transparent !important; }
 
-.products li {
-  width: 50% !important; }
+.woocommerce-MyAccount-navigation ul {
+  padding: 0;
+  margin: 0; }
+  .woocommerce-MyAccount-navigation ul li {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .woocommerce-MyAccount-navigation ul li a {
+      color: #96588a;
+      font-size: 14px;
+      font-weight: 400 !important;
+      font-family: "Poppins" !important;
+      text-decoration: none;
+      padding: 15px 0;
+      display: block; }
+
+.woocommerce-MyAccount-navigation-link--dashboard a:before {
+  content: "\f0e4";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation-link--orders a:before {
+  content: "\f291";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation-link--downloads a:before {
+  content: "\f1c6";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation-link--edit-address a:before {
+  content: "\f015";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation-link--edit-account a:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation-link--customer-logout a:before {
+  content: "\f08b";
+  font-family: FontAwesome;
+  float: right; }
+
+.woocommerce-MyAccount-navigation ul li.is-active a::before {
+  opacity: 1; }
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  width: 60%; }
 
 /*
 single
@@ -5823,128 +5890,10 @@ cart
 /*
 login
 */
-.wpcf7-form span input {
-  height: 40px;
-  border: 1px solid #dedede;
-  border-radius: 0 !important; }
+.col-1 {
+  max-width: 100% !important; }
 
-.wpcf7-submit {
-  color: #fff !important;
-  background: #333 !important;
-  border-radius: 0 !important;
-  padding: 15px 40px !important;
-  font-family: "Poppins" !important;
-  font-weight: 400 !important;
-  font-size: 14px;
-  cursor: pointer; }
-
-.descrip {
-  background: #f3f3f3;
-  padding: 25px; }
-
-.title-login {
-  background: #e8e8e8;
-  margin-bottom: 0 !important;
-  padding: 10px 25px; }
-
-.wpcf7-list-item label input {
-  height: 15px;
-  width: 15px;
-  margin-right: 15px;
-  cursor: pointer; }
-
-.wpcf7-list-item {
-  margin-left: 0 !important;
-  margin: 15px 0 !important; }
-
-.login {
-  width: 370px;
-  float: left;
-  max-width: 100%; }
-
-.register {
-  width: 680px;
-  float: left;
-  margin-left: 60px;
-  max-width: 100%; }
-
-.site-content {
-  margin: 100px 0; }
-
-.email-login {
-  margin-bottom: 20px !important;
-  padding: 10px !important; }
-
-.pass-login {
-  padding: 10px !important; }
-
-.title-login {
-  font-size: 18px;
-  font-weight: 400 !important;
-  font-family: "Poppins" !important;
-  color: #333 !important; }
-
-.title-restiger {
-  font-size: 18px;
-  font-weight: 400 !important;
-  font-family: "Poppins" !important;
-  color: #333 !important; }
-
-.descrip-restiger {
-  font-size: 14px;
-  font-weight: 400 !important;
-  font-family: "Poppins" !important;
-  color: #8f8f8f !important; }
-
-.descrip-login {
-  font-size: 14px;
-  font-weight: 400 !important;
-  font-family: "Poppins" !important;
-  color: #8f8f8f !important; }
-
-.one {
-  float: left; }
-
-.two {
-  float: right; }
-
-.user-register {
-  overflow: hidden; }
-  .user-register span {
-    font-family: "Poppins" !important;
-    font-weight: 400 !important;
-    font-size: 14px;
-    color: #8f8f8f !important; }
-    .user-register span strong {
-      color: #333 !important; }
-
-.user-registe {
-  margin: 20px 0; }
-  .user-registe span {
-    font-family: "Poppins" !important;
-    font-weight: 400 !important;
-    font-size: 14px;
-    color: #8f8f8f !important; }
-    .user-registe span strong {
-      color: #333 !important; }
-
-.left {
-  text-align: left !important; }
-
-.bread {
-  padding: 50px 0 90px 0; }
-
-.wpcf7-list-item-label {
-  font-family: "Poppins" !important;
-  font-weight: 400 !important;
-  font-size: 14px;
-  color: #8f8f8f !important; }
-
-.sp-footer {
-  font-family: "Poppins" !important;
-  font-weight: 400 !important;
-  float: left;
-  font-size: 14px;
-  color: #8f8f8f !important; }
+.col-2 {
+  max-width: 100% !important; }
 
 /*# sourceMappingURL=style.css.map */

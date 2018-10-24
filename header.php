@@ -26,11 +26,9 @@
 
 	<header id="masthead" class="site-header">
 		<div class="header-inner">
-			<div class="main-header container">
+			<div class="main-header <?php echo is_shop() ? "container-fluid" : "container" ?>">
 				<div class="site-branding">
-					<?php
-					the_custom_logo();
-						 ?>
+					<?php minera_logo(); ?>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation">

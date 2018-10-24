@@ -53,3 +53,16 @@
 .search-product::placeholder {
 	color: $color-black;
 }
+
+.woocommerce-form .woocommerce-form-login .login {
+	border: none;
+}
+
+.woocommerce-LostPassword .lost_password a {
+    color: #96588a;
+}
+
+.woocommerce-Input .woocommerce-Input--text .input-text {
+	background-color: #f2f2f2;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+}
