@@ -861,6 +861,9 @@ a:hover, a:active {
 .woocommerce-MyAccount-content a {
   color: #96588a; }
 
+.logo {
+  margin-top: 40px; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -5320,126 +5323,92 @@ font-awesome
 /*
 footer
  */
-#colophon {
-  background: #f3f3f3 !important; }
-
-.subscribe-tit {
-  color: #8f8f8f !important;
-  font-family: "Poppins" !important;
-  font-size: 24px;
-  font-weight: 400 !important;
-  margin-bottom: 0; }
-
-.wpb_wrapper p {
-  color: #8f8f8f !important;
-  font-family: "Poppins" !important;
-  font-size: 14px;
-  font-weight: 400 !important; }
-
-#footer-button {
-  height: 50px;
-  background: #333 !important;
-  color: #fff !important;
-  font-family: "Poppins" !important;
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: -20px; }
+.site-footer {
+  background: #f3f3f3;
+  padding: 80px 0 20px 0; }
+  .site-footer .footer-top {
+    display: flex;
+    width: 100%; }
+    .site-footer .footer-top .footer-bonus {
+      padding-left: 0; }
+      .site-footer .footer-top .footer-bonus h6 {
+        font-family: "Poppins" !important;
+        font-weight: 400 !important;
+        font-size: 24px;
+        color: #333 !important; }
+      .site-footer .footer-top .footer-bonus p {
+        font-size: 14px;
+        color: #8f8f8f !important;
+        font-family: "Poppins" !important;
+        font-weight: 400 !important; }
+    .site-footer .footer-top .footer-subrice {
+      padding-right: 0; }
+  .site-footer .footer-bottom {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 40px;
+    border-top: 1px solid #e8e8e8; }
+    .site-footer .footer-bottom .footer-logo {
+      padding-left: 0; }
+    .site-footer .footer-bottom .footer-social {
+      text-align: right;
+      padding-right: 0; }
+      .site-footer .footer-bottom .footer-social div {
+        display: inline-block;
+        color: #8f8f8f !important;
+        font-size: 14px;
+        font-family: "Poppins" !important; }
+      .site-footer .footer-bottom .footer-social ul {
+        padding: 0;
+        margin: 0;
+        display: inline-block; }
+        .site-footer .footer-bottom .footer-social ul li {
+          display: inline-block; }
+          .site-footer .footer-bottom .footer-social ul li a {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            line-height: 30px; }
+            .site-footer .footer-bottom .footer-social ul li a:hover {
+              background: #333 !important; }
+              .site-footer .footer-bottom .footer-social ul li a:hover i {
+                color: #fff !important; }
+            .site-footer .footer-bottom .footer-social ul li a i {
+              color: #333 !important; }
+    .site-footer .footer-bottom .footer-menu ul {
+      padding: 0;
+      margin: 0; }
+      .site-footer .footer-bottom .footer-menu ul li {
+        display: inline-block; }
+        .site-footer .footer-bottom .footer-menu ul li a {
+          font-size: 14px;
+          font-weight: bold;
+          font-family: "Poppins" !important;
+          color: #333 !important;
+          text-decoration: none;
+          margin-right: 10px; }
 
 #footer-mail {
   height: 50px;
-  text-indent: 15px;
-  width: 460px;
-  border: 1px solid #e8e8e8; }
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  padding: 0 20px; }
 
-.footer-sup {
-  margin-top: 40px;
-  padding-left: 0 !important;
-  padding-right: 0 !important; }
+#footer-button {
+  background: #333 !important;
+  color: #fff;
+  height: 50px;
+  padding: 0 30px;
+  position: absolute;
+  top: 0;
+  right: 0; }
 
-.footer-sub {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  border-top: 1px solid #e8e8e8;
-  padding-top: 50px; }
-
-#text-3 {
-  width: 41.66666667%;
-  float: left; }
-
-#custom_html-2 {
-  padding-top: 20px; }
-
-.site-inter {
-  clear: both;
-  margin-top: 30px; }
-
-.footer-social {
-  float: right;
-  padding: 0;
-  margin: 0;
-  margin-top: -8px;
-  margin-left: 12px; }
-  .footer-social li {
-    list-style: none;
-    display: inline-block;
-    padding: 3px 8px;
-    height: 30px;
-    width: 30px;
-    line-height: 27px;
-    background: #fff;
-    border-radius: 50%; }
-    .footer-social li:hover {
-      background: #333 !important; }
-      .footer-social li:hover i {
-        color: #fff !important; }
-    .footer-social li a i {
-      color: #333 !important; }
-
-.star-rating span {
-  color: #ddaa20; }
-
-.footer-menu {
-  padding: 0;
-  margin: 0; }
-  .footer-menu li {
-    list-style: none;
-    display: inline-block; }
-    .footer-menu li a {
-      font-family: "Poppins" !important;
-      color: #333 !important;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0 15px; }
-
-.footer-sup .textwidget p {
-  font-family: "Poppins" !important;
-  font-weight: 400 !important;
-  font-size: 14px;
-  color: #8f8f8f !important; }
-.footer-sup .widgettitle {
-  font-family: "Poppins" !important;
-  font-size: 24px;
-  font-weight: 400 !important;
-  color: #333 !important; }
-
-.menu-menu-footer-container ul {
-  padding: 0; }
-  .menu-menu-footer-container ul li {
-    display: inline-block;
-    margin: 0 15px 0 0; }
-    .menu-menu-footer-container ul li a {
-      text-decoration: none;
-      color: #333 !important;
-      font-size: 14px;
-      font-weight: bold;
-      font-family: "Poppins" !important; }
-
-#custom_html-2 {
-  float: right;
-  width: 53%; }
+.wpcf7-form p {
+  position: relative; }
 
 /*
 content
@@ -5496,8 +5465,11 @@ content
   color: #fff !important;
   border-radius: 0 !important; }
 
+.star-rating a {
+  color: #ddaa20; }
+
 .description-product {
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   font-family: "Poppins" !important;
   font-weight: 400 !important;
   font-size: 14px;
@@ -5804,6 +5776,26 @@ single
   font-size: 14px;
   font-weight: 400 !important; }
 
+.share-product-with {
+  width: 200px; }
+  .share-product-with span {
+    color: #333 !important;
+    font-family: "Poppins" !important;
+    font-size: 12px;
+    font-weight: bold !important; }
+  .share-product-with ul {
+    padding: 0;
+    margin: 0;
+    float: right; }
+    .share-product-with ul li {
+      display: inline-block; }
+      .share-product-with ul li a {
+        margin-right: 10px; }
+        .share-product-with ul li a:hover i {
+          color: #333 !important; }
+        .share-product-with ul li a i {
+          color: #8f8f8f !important; }
+
 /*
 cart
 */
@@ -5886,6 +5878,24 @@ cart
 .coupon .input-text {
   height: 36px !important;
   border-radius: 0 !important; }
+
+.showcoupon {
+  color: #333 !important;
+  font-size: 14px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important; }
+
+.woocommerce-form-coupon p {
+  color: #8f8f8f !important;
+  font-size: 14px;
+  font-family: "Poppins" !important; }
+  .woocommerce-form-coupon p .input-text {
+    height: 50px;
+    border: 1px solid #e8e8e8; }
+  .woocommerce-form-coupon p .button {
+    background: #333 !important;
+    height: 50px;
+    color: #fff; }
 
 /*
 login

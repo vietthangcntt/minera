@@ -14,32 +14,32 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<div class="footer-sup container">
-				<?php 	
-					if(is_active_sidebar('footer-sidebar')){
-						dynamic_sidebar('footer-sidebar');
-					}
-					else{
-						_e('No Sidebar');
-					} 
-				?>
-			</div>
-		</div><!-- .site-info -->
-		<div class="site-inter">
-			<div class="footer-sub container">
-					<?php the_custom_logo(); ?>
-					<?php 	
-						if(is_active_sidebar('footer-sidebar-2')){
-							dynamic_sidebar('footer-sidebar-2');
-						}
-						else{
-							_e('No Sidebar');
-						} 
-					?>
+		<div class="container">
+			<div class="row">
+				<div class="footer-top">
+					<div class="footer-bonus col-md-5">
+						<?php echo get_theme_mod( 'coupon' ) ?>
+					</div><!-- .site-info -->
+					<div class="footer-subrice col-md-7">
+						<?php echo do_shortcode( get_theme_mod( 'subcribe' ) ); ?>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<div class="footer-logo col-md-4">
+						<?php minera_logo(); ?>
+					</div>
+					<div class="footer-menu col-md-4">
+						<?php echo get_theme_mod( 'menu_footer' ); ?>
+					</div>
+					<div class="footer-social col-md-4">
+						<?php echo get_theme_mod( 'contact' ); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

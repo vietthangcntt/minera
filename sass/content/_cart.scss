@@ -111,3 +111,30 @@
    		border-radius: 0 !important;
 	}
 }
+
+.showcoupon {
+	color: $color-black;
+	font-size: 14px;
+	font-weight: $weight;
+	font-family: $font;
+}
+
+.woocommerce-form-coupon { 
+	p {
+		color: $color-gray;
+		font-size: 14px; 
+		font-family: $font;
+		.input-text {
+			height: 50px;
+			border: 1px solid #e8e8e8;
+		}
+
+		.button {
+			background: $color-black;
+			height: 50px;
+			color: #fff;
+		}
+
+	}
+	
+}

@@ -1,150 +1,116 @@
-#colophon {
-	background: $bg-header;
-}
-.subscribe-tit {
-	color: $color-gray;
-	font-family: $font;
-	font-size: 24px;
-	font-weight: $weight;
-	margin-bottom: 0;
-}
-
-.wpb_wrapper {
-	p {
-		color: $color-gray;
-		font-family: $font;
-		font-size: 14px;
-		font-weight: $weight;
+.site-footer {
+	background: #f3f3f3;
+	padding: 80px 0 20px 0;
+	.footer-top {
+		display: flex;
+		width: 100%;
+		.footer-bonus {
+			padding-left: 0;
+			h6 {
+				font-family: $font;
+				font-weight: $weight;
+				font-size: 24px;
+				color: $color-black;
+			}
+			p {
+				font-size: 14px;
+				color: $color-gray;
+				font-family: $font;
+				font-weight: $weight;
+			}
+		}
+		.footer-subrice {
+			padding-right: 0;
+		}
 	}
-}
 
-#footer-button {
-	height: 50px;
-	background: $color-black;
-	color: $color-white;
-	font-family: $font;
-	font-size: 14px;
-	cursor: pointer;
-	margin-left: -20px;
+	.footer-bottom {
+		display: flex;
+		width: 100%;
+	    margin-top: 20px;
+    	padding-top: 40px;
+    	border-top: 1px solid #e8e8e8;
+
+    	.footer-logo {
+    		padding-left: 0;
+    	}
+
+    	.footer-social  {
+    		text-align: right;
+    		div {
+    			display: inline-block;
+    			color: $color-gray;
+    			font-size: 14px;
+    			font-family: $font;
+    		}
+    		padding-right: 0;
+    		ul {
+    			padding: 0;
+    			margin: 0;
+    			display: inline-block;
+    			li {
+    				display: inline-block;
+    				a {
+    					height: 30px;
+    					width: 30px;
+    					border-radius: 50%;
+    					display: block;
+    					text-align: center;
+    					line-height: 30px;
+    					&:hover {
+    						background: $color-black;
+    						i {
+    							color: #fff !important;
+    						}
+    					}
+    					i {
+    						color: $color-black;
+    					}
+    				}
+    			}
+    		}
+    	}
+    	.footer-menu {
+    		ul {
+    			padding: 0;
+    			margin: 0;
+    			li {
+    				display: inline-block;
+    				a {
+    					font-size: 14px;
+    					font-weight: bold;
+    					font-family: $font;
+    					color: $color-black;
+    					text-decoration: none;
+    					margin-right: 10px;
+    				}
+    			}
+    		}
+    	}
+
+	}
 }
 
 #footer-mail {
 	height: 50px;
-	text-indent: 15px;
-	width: 460px;
+	background: #fff;
 	border: 1px solid #e8e8e8;
-}
-.footer-sup {
-    margin-top: 40px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    
-} 
-.footer-sub {     
-	display: flex;     
-	justify-content: space-between;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    border-top: 1px solid #e8e8e8;
-    padding-top: 50px;
-    }
- #text-3 {     width: 41.66666667%;     float: left; }
-
-#custom_html-2 {     padding-top: 20px; }
-
-.site-inter {
-	clear: both;
-	margin-top: 30px;
+	width: 100%;
+	padding: 0 20px;
 }
 
-.footer-social {
-	float: right;
-	padding: 0;
-	margin: 0;
-    margin-top: -8px;
-    margin-left: 12px;
-	li {
-		list-style: none;
-		display: inline-block;
-		padding: 3px 8px;
-		height: 30px;
-		width: 30px;
-		line-height: 27px;
-		background: #fff;
-		border-radius: 50%;
+#footer-button {
+	background: $color-black;
+	color: #fff;
+	height: 50px;
+	padding: 0 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
-		&:hover {
-			background: $color-black;
-			i {
-				color: #fff !important;
-			}
-		}
-		a {
-			i {
-				color: $color-black;
-			}
-		}
+.wpcf7-form {
+	p {
+		position: relative;
 	}
-}
-.star-rating {
-	span {
-		color: #ddaa20;
-	}
-}
-
-.footer-menu {
-	padding: 0;
-	margin: 0;
-	li {
-		list-style: none;
-		display: inline-block;
-		a {
-			font-family: $font;
-			color: $color-black;
-			font-size: 14px;
-			font-weight: bold;
-			text-decoration: none;
-			padding: 0 15px;
-		}
-	}
-}
-
-.footer-sup {
-	.textwidget {
-		p {
-			font-family: $font;
-			font-weight: $weight;
-			font-size: 14px;
-			color: $color-gray;
-		}
-	}
-	.widgettitle {
-		font-family: $font;
-		font-size: 24px;
-		font-weight: $weight;
-		color: $color-black;
-	}
-}
-
-.menu-menu-footer-container {
-	ul { 
-		padding: 0;
-		li {
-			display: inline-block;
-			margin: 0 15px 0 0;
-			a {
-				text-decoration: none;
-				color: $color-black;
-				font-size: 14px;
-				font-weight: bold;
-				font-family: $font;
-			}
-		}
-	}
-}
-
-
-#custom_html-2 {
-    float: right;
-    width: 53%;
 }

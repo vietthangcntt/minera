@@ -159,6 +159,27 @@ Logo
 	}
 /**
 
+/*
+	add share 
+*/
+	function minera_share_with() { ?>
+		<div class="share-product-with">
+			<span><?php esc_html_e( 'Share' ) ?></span>
+			<ul class="share-prduct">
+				<li class="facebook">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				</li>
+				<li class="twitter">
+					<a href="https://twitter.com/home?status=<?php echo get_permalink(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				</li>
+				<li class="pinterest">
+					<a href="https://pinterest.com/pin/create/button/?url=<?php echo get_permalink(); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+				</li>
+			</ul>
+		</div>
+	<?php }
+
+
 
 /**
 * page curmber 

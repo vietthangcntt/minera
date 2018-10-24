@@ -66,9 +66,14 @@
 	}
 
 }
+.star-rating {
+	a {
+	    color: #ddaa20;
+	}
+}
 
 .description-product {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     font-family: $font;
     font-weight: $weight;
     font-size: 14px;

@@ -37,11 +37,5 @@ global $product;
 	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<p class="tagged_as">' . _n( 'Tag:', '<span class="tags"> Tags: </span>', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</p>' ); ?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
-	<ul class="social-share">
-		<span>Share</span>
-		<li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a></li>
-		<li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
-		<li><a href="#"> <i class="fa fa-pinterest" aria-hidden="true"></i> </a></li>
-
-	</ul>
+	<?php minera_share_with(); ?>
 </div>
