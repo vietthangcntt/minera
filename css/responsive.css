@@ -4,7 +4,11 @@
 		margin-bottom: 30px;
 	}
 }
-
+@media (max-width: 1076px ) {
+	.main-navigation a {
+		padding: 0 14px;
+	}
+}
 @media (max-width: 1024px ) {
 	.woocommerce ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-2 li.product {
 		width: 100%;
