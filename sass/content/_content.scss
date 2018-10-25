@@ -17,6 +17,7 @@
 
 .p-head {
     float: left;
+    position: relative;
 }
 
 .p-content {
@@ -46,7 +47,13 @@
 	    padding: 0 10px 0 30px;
 	}
 }
-
+.woocommerce span.onsale {
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	background: red;
+	color: #fff;
+}
 .columns-7 {
 	.p-head {
 	    float: left;

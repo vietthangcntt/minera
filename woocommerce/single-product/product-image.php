@@ -36,7 +36,9 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
 ) );
-	
+if ( !in_array($post_thumbnail_id, $attachment_ids) ) {
+	$attachment_ids[] = $post_thumbnail_id;
+}
 	// print_r($attachment_ids);
 ?>
  <div class="woocommerce-product-gallery images">

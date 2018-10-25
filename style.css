@@ -5470,7 +5470,8 @@ content
   padding: 70px 0; }
 
 .p-head {
-  float: left; }
+  float: left;
+  position: relative; }
 
 .p-content {
   float: left; }
@@ -5490,6 +5491,13 @@ content
   float: left;
   width: calc(100% - 310px);
   padding: 0 10px 0 30px; }
+
+.woocommerce span.onsale {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  background: red;
+  color: #fff; }
 
 .columns-7 .p-head {
   float: left;
@@ -5982,12 +5990,17 @@ cart
     height: 50px;
     color: #fff; }
 
+.stars a {
+  color: gold; }
+  .stars a:hover {
+    color: gold !important; }
+
 .reviews_tab a {
   position: relative; }
   .reviews_tab a span {
     position: absolute;
     right: -13px;
-    top: 0;
+    top: 5px;
     background: #cf1e1e;
     color: #fff;
     font-size: 10px;
