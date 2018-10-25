@@ -32,7 +32,7 @@ global $product;
 
 	<?php endif; ?>
 
-	<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<p class="posted_in">' . _n( 'Category:', '<span class="Category">Categories: </span>', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</p>' ); ?>
+	<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<p class="posted_in">' . _n( '<span class="Category">Categorys:</span>', '<span class="Category">Categories: </span>', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</p>' ); ?>
 
 	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<p class="tagged_as">' . _n( 'Tag:', '<span class="tags"> Tags: </span>', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</p>' ); ?>
 

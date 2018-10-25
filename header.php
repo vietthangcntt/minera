@@ -40,7 +40,7 @@
 					) );
 					?>
 				</nav><!-- #site-navigation -->
-				<?php echo minera_shop_header(); ?>
+				<?php minera_shop_header(); ?>
 			</div>
 		</div>
 		<div class="bread container">

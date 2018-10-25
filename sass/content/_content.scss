@@ -62,11 +62,30 @@
 	    	max-width: 310px;
 	    }
 	}
-
+	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+		width: 50%;
+	}
 	.p-content {
 		float: left;
 	    width: calc(100% - 310px);
 	    padding: 0 10px 0 30px;
+	}
+}
+
+.p-content {
+	margin-bottom: 25px;
+}
+.entry-title {
+	font-family: $font;
+	font-weight: $weight;
+	color: $color-black;
+	font-size: 24px;
+}
+.woocommerce-tabs {
+	h2 {
+		font-size: 18px;
+		font-weight: $weight;
+		font-family: $font;
 	}
 }
 .columns-8 {
@@ -153,12 +172,12 @@
 		    width: unset !important;
 		    border: none !important;
 		    .current {
-	    	    color: red !important;
+	    	    color: $color-black;
 	    	    background: transparent !important;
 		    }
 		    a {
 		    &:hover {
-		    	color: red !important;
+		    	color: $color-black;
 		    	background: transparent !important;
 		    }
 

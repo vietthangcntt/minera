@@ -5504,10 +5504,26 @@ content
   width: 310px; }
   .columns-7 .p-head img {
     max-width: 310px; }
+.columns-7 .woocommerce ul.products li.product, .columns-7 .woocommerce-page ul.products li.product {
+  width: 50%; }
 .columns-7 .p-content {
   float: left;
   width: calc(100% - 310px);
   padding: 0 10px 0 30px; }
+
+.p-content {
+  margin-bottom: 25px; }
+
+.entry-title {
+  font-family: "Poppins" !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  font-size: 24px; }
+
+.woocommerce-tabs h2 {
+  font-size: 18px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important; }
 
 .columns-8 .p-head {
   float: left;
@@ -5574,10 +5590,10 @@ content
     width: unset !important;
     border: none !important; }
     .woocommerce-pagination ul li .current {
-      color: red !important;
+      color: #333 !important;
       background: transparent !important; }
     .woocommerce-pagination ul li a:hover {
-      color: red !important;
+      color: #333 !important;
       background: transparent !important; }
 
 .woocommerce-MyAccount-navigation ul {
@@ -5852,7 +5868,11 @@ single
 .woocommerce-tabs ul li {
   border: none !important;
   background: transparent !important;
-  padding-top: 40px !important; }
+  padding-top: 40px !important;
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important;
+  font-size: 14px;
+  font-weight: 400 !important; }
   .woocommerce-tabs ul li a {
     font-family: "Poppins" !important;
     font-size: 18px;
@@ -5865,6 +5885,11 @@ single
       color: #333 !important;
       font-weight: bold !important;
       border: none !important; }
+
+.page-numbers li a {
+  color: #8f8f8f !important; }
+  .page-numbers li a:hover {
+    color: #333 !important; }
 
 .woocommerce-Tabs-panel--description p {
   font-family: "Poppins" !important;
@@ -5996,6 +6021,9 @@ cart
     height: 50px;
     color: #fff; }
 
+.woocommerce table.shop_table td {
+  padding: 0; }
+
 .stars a {
   color: gold; }
   .stars a:hover {
@@ -6015,9 +6043,16 @@ cart
     border-radius: 50%;
     line-height: 19px; }
 
+.woocommerce a.remove {
+  height: auto;
+  width: auto; }
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
   position: unset;
   border: 0; }
+
+#add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th {
+  line-height: unset; }
 
 /*
 login
@@ -6027,5 +6062,19 @@ login
 
 .col-2 {
   max-width: 100% !important; }
+
+.u-column2 {
+  float: right !important; }
+  .u-column2 h2 {
+    font-size: 18px;
+    font-weight: 400 !important;
+    font-family: "Poppins" !important; }
+
+.u-column1 {
+  float: left !important; }
+  .u-column1 h2 {
+    font-size: 18px;
+    font-weight: 400 !important;
+    font-family: "Poppins" !important; }
 
 /*# sourceMappingURL=style.css.map */

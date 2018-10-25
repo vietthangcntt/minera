@@ -5,3 +5,21 @@
 .col-2 {
 	max-width: 100% !important;
 }
+
+.u-column2 {
+	float: right !important;
+	h2 {
+		font-size: 18px;
+		font-weight: $weight;
+		font-family: $font;
+	}
+}
+
+.u-column1 {
+	float: left !important;
+	h2 {
+		font-size: 18px;
+		font-weight: $weight;
+		font-family: $font;
+	}
+}

@@ -323,7 +323,7 @@ function minera_scripts() {
 	wp_enqueue_script( 'minera-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'minera-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_register_script('js', get_template_directory_uri().'/js/minera.js',array('jquery'));
+	wp_register_script('js', get_template_directory_uri().'/js/minera.js',array('jquery'),null,true);
 	wp_enqueue_script('js');
 	wp_register_style('responsive-css',get_template_directory_uri().'/css/responsive.css','all');
 	wp_enqueue_style('responsive-css');
@@ -359,5 +359,23 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
+
+function iconic_cart_count_fragments( $fragments ) {
+    
+    global $woocommerce;
+    $total = $woocommerce->cart->cart_contents_count;
+
+    ob_start();
+    ?>
+        <span class="counter-cart"><?php echo esc_html( $total ); ?></span>
+    <?php
+
+    $fragments['span.counter-cart'] = ob_get_clean();
+
+    return $fragments;
+    
 }
 

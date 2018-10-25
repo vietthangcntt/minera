@@ -140,7 +140,9 @@
 		}
 
 	}
-	
+}
+.woocommerce table.shop_table td {
+	padding: 0;
 }
 .stars {
 	a {
@@ -167,8 +169,14 @@
 		}
 	}
 }
-
+.woocommerce a.remove {
+	height: auto;
+	width: auto;
+}
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
 	position: unset;
 	border: 0;
+}
+#add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th {
+	line-height: unset;
 }
