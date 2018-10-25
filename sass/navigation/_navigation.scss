@@ -7,3 +7,22 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+
+.login-btn {
+	&:before{
+		content: url(image/user.png);
+	}
+}
+
+#btn-search-product {
+	&:before{
+		content: url(image/search.png);
+	}
+}
+
+.shopping-cart-icon {
+	&:before{
+		content: url(image/cart.png);
+	}
+}

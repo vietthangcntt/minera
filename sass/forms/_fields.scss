@@ -35,3 +35,35 @@ textarea {
 		width: 110px !important;
 	}
 }
+
+.woocommerce-MyAccount-content {
+	.input-text {
+		height: 50px;
+		border: 1px solid #e8e8e8;
+	}
+	p {
+		color: $color-black;
+		font-family: $font;
+		font-size: 14px;
+		font-weight: $weight;
+
+		.woocommerce-Button {
+			background: $color-black;
+			color: #fff;
+			padding: 10px 25px;
+		}
+	}
+}
+
+.woocommerce .col2-set, .woocommerce-page .col2-set {
+	max-width: 100%;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+	float: none;
+	padding-left: 0;
+}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+	float: none;
+	padding-left: 0;
+}

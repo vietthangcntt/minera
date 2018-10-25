@@ -33,6 +33,9 @@
 
     	.footer-logo {
     		padding-left: 0;
+            .logo {
+                margin-top: 0;
+            }
     	}
 
     	.footer-social  {
@@ -107,6 +110,9 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+    font-family: $font;
+    font-weight: $weight;
+    font-size: 14px;
 }
 
 .wpcf7-form {

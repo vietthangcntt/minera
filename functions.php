@@ -124,13 +124,13 @@ if ( ! function_exists( 'minera_shop_header' ) ) {
   function minera_shop_header() {?>
 	<div class="header-action hd1-action">
 		<div class="search">
-			<button class='btn btn-search' id="btn-search-product"><i class="fa fa-search" aria-hidden="true"></i></button>
+			<button class='btn btn-search' id="btn-search-product"></button>
 		</div>
 		<div class="user-btn">
-		<a href="<?php echo esc_html(get_permalink(get_option('woocommerce_myaccount_page_id'))); ?>" class="login-btn"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+		<a href="<?php echo esc_html(get_permalink(get_option('woocommerce_myaccount_page_id'))); ?>" class="login-btn"></a>
 		</div>
 		<div class="shopping-cart" data-label="Cart">
-			<a class="shopping-cart-icon" href="<?php echo wc_get_cart_url() ?>" title="View your shopping cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="counter-cart"><?php echo WC()->cart->get_cart_contents_count() ?></span></a>
+			<a class="shopping-cart-icon" href="<?php echo wc_get_cart_url() ?>" title="View your shopping cart"><span class="counter-cart"><?php echo WC()->cart->get_cart_contents_count() ?></span></a>
 		</div>
 	</div>
   <?php }
@@ -287,6 +287,20 @@ register_sidebar($sidebar_footer_2);
 
 
 remove_action('woocommerce_template_single_title' , 'woocommerce_single_product_summary' , 5  );
+
+
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+
+
+	$number = get_comments_number();
+
+	$tabs["reviews"]["title"] = sprintf( __("Reviews  <span>%s</span>", 'minera'), $number );
+
+	return $tabs;
+
+}
 
 
 

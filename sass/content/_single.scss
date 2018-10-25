@@ -285,6 +285,7 @@
 		font-weight: $weight;
 		color: $color-gray;
 		font-size: 14px;
+	    text-decoration: none;
 	}
 }
 .posted_in {
@@ -308,6 +309,12 @@
 	&:hover {
 		background: transparent !important;
 		color: red !important;
+	}
+}
+
+.star-rating {
+	span {
+	    color: #ddaa20;
 	}
 }
 

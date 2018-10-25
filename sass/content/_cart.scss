@@ -40,6 +40,10 @@
     left: 0;
     margin-top: 30px;
 }
+
+#customer_details {
+	width:60%;
+}
 #payment {
 	position: relative;
 }
@@ -137,4 +141,27 @@
 
 	}
 	
+}
+
+.reviews_tab {
+	a {
+		position: relative;
+		span {
+		    position: absolute;
+		    right: -13px;
+    		top: 0;
+		    background: #cf1e1e;
+		    color: #fff;
+		    font-size: 10px;
+		    width: 19px;
+		    height: 19px;
+		    border-radius: 50%;
+		    line-height: 19px;
+		}
+	}
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+	position: unset;
+	border: 0;
 }
