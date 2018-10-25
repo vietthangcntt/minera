@@ -84,6 +84,13 @@
 	    padding: 0 10px 0 30px;
 	}
 }
+.columns-4 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	width: 25%;
+}
+.columns-3 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	width: 33,3%;
+}
+
 .shop-full {
 	padding-right: 80px;
 	padding-left: 80px;
