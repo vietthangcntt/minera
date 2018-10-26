@@ -1,0 +1,65 @@
+.not-found {
+	text-align: center;
+	.page-header {
+		.page-title {
+			font-family: $font;
+			font-weight: bold;
+			color: $color-black;
+			font-size: 40px;
+		}
+	}
+
+	.page-content {
+		p {
+			color: $color-gray;
+			font-family: $font;
+			font-weight: $weight;
+			font-size: 18px;
+		}
+
+		.search-field {
+			height: 40px;
+			border: 1px solid #e8e8e8;
+		}
+		.search-submit {
+			height: 40px;
+			background: $color-black;
+			color: #fff;
+			font-family: $font;
+		}
+	}
+}
+
+.search {
+	.p-head {
+		a {
+			position: relative;
+			span {
+			    position: absolute;
+			    background: red;
+			    height: 40px;
+			    width: 40px;
+			    line-height: 40px;
+			    border-radius: 50%;
+			    text-align: center;
+			    color: #fff;
+			}
+		}
+	}
+	.p-content {
+		.add_to_cart_button {
+			background: #333 !important;
+		    color: #fff !important;
+		    border-radius: 0 !important;
+		    padding: 10px;
+		}
+	    padding-right: 20px;
+
+	}
+	.site-main {
+		.product {
+			width:50%;
+			float:left;
+		}
+	}
+}

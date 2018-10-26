@@ -1,6 +1,6 @@
 /*!
 Theme Name: minera
-Theme URI: http://underscores.me/
+Theme URI: http://haintheme.com
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: WordPress Minera Theme
@@ -6140,5 +6140,91 @@ login
 
 .woocommerce-Input .woocommerce-Input--text .input-text::placeholder {
   font-family: "Poppins" !important; }
+
+/*
+contact
+*/
+.text-324 input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #333 !important;
+  border-radius: 0;
+  margin-bottom: 15px; }
+
+.email-403 input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #333 !important;
+  border-radius: 0; }
+
+.textarea-583 textarea {
+  border: none;
+  border-bottom: 1px solid #333 !important;
+  border-radius: 0; }
+
+.btn-contact {
+  color-black: #333 !important;
+  color: #fff; }
+
+.elementor-widget-wrap {
+  position: relative; }
+  .elementor-widget-wrap .elementor-element-835b0a4 {
+    position: absolute;
+    top: 40%;
+    left: 30%; }
+  .elementor-widget-wrap .elementor-element-6339b2a {
+    position: absolute;
+    top: 50%;
+    right: 42%; }
+  .elementor-widget-wrap .elementor-element-d942fa6 {
+    position: absolute;
+    top: 30%;
+    left: 25%; }
+
+/*
+search
+*/
+.not-found {
+  text-align: center; }
+  .not-found .page-header .page-title {
+    font-family: "Poppins" !important;
+    font-weight: bold;
+    color: #333 !important;
+    font-size: 40px; }
+  .not-found .page-content p {
+    color: #8f8f8f !important;
+    font-family: "Poppins" !important;
+    font-weight: 400 !important;
+    font-size: 18px; }
+  .not-found .page-content .search-field {
+    height: 40px;
+    border: 1px solid #e8e8e8; }
+  .not-found .page-content .search-submit {
+    height: 40px;
+    background: #333 !important;
+    color: #fff;
+    font-family: "Poppins" !important; }
+
+.search .p-head a {
+  position: relative; }
+  .search .p-head a span {
+    position: absolute;
+    background: red;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff; }
+.search .p-content {
+  padding-right: 20px; }
+  .search .p-content .add_to_cart_button {
+    background: #333 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    padding: 10px; }
+.search .site-main .product {
+  width: 50%;
+  float: left; }
 
 /*# sourceMappingURL=style.css.map */

@@ -164,7 +164,7 @@ Logo
 */
 	function minera_share_with() { ?>
 		<div class="share-product-with">
-			<span><?php esc_html_e( 'Share' ) ?></span>
+			<span><?php echo esc_html( 'Share' ) ?></span>
 			<ul class="share-prduct">
 				<li class="facebook">
 					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -186,7 +186,7 @@ Logo
 */
 if (! function_exists('minera_home')) {
 	function minera_home() {
-		$home = get_bloginfo('url');
+		$home = home_url('/');
 		if (is_shop()) { ?>
 			<h1 class="title-header">Product Listing</h1>
 			<ul class="crumbs">
@@ -257,7 +257,7 @@ add description product
 		if ( $product->get_short_description() && ! is_product() ) {
 		?>
 			<div class="description-product">
-				<?php echo esc_html_e( $product->get_short_description() ); ?>
+				<?php echo esc_html( $product->get_short_description() ); ?>
 				<!-- <?php echo the_excerpt() ?> -->
 			</div>
 		<?php
