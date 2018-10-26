@@ -6057,24 +6057,88 @@ cart
 /*
 login
 */
-.col-1 {
-  max-width: 100% !important; }
-
-.col-2 {
-  max-width: 100% !important; }
-
 .u-column2 {
-  float: right !important; }
+  padding: 0;
+  padding-left: 100px !important; }
   .u-column2 h2 {
     font-size: 18px;
     font-weight: 400 !important;
     font-family: "Poppins" !important; }
 
 .u-column1 {
-  float: left !important; }
+  padding: 0;
+  padding-left: 0 !important; }
   .u-column1 h2 {
     font-size: 18px;
     font-weight: 400 !important;
-    font-family: "Poppins" !important; }
+    font-family: "Poppins" !important;
+    background: #e8e8e8;
+    padding: 20px 30px;
+    margin: 0; }
+  .u-column1 .login {
+    background: #f3f3f3;
+    padding: 30px !important; }
+
+.woocommerce .col2-set, .woocommerce-page .col2-set {
+  display: flex; }
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+.form-title {
+  font-size: 14px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important; }
+
+.form-span {
+  font-size: 12px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important; }
+
+.form-pas {
+  font-size: 12px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important;
+  color: #333 !important;
+  float: right; }
+
+.woocommerce-LostPassword .woocommerce-Button {
+  background: #333 !important;
+  color: #fff !important;
+  border-radius: 0 !important; }
+
+.woocommerce-FormRow .woocommerce-Button {
+  background: #333 !important;
+  color: #fff !important;
+  border-radius: 0 !important; }
+
+.form-title-2 {
+  font-size: 14px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important; }
+  .form-title-2 .required {
+    color: #333 !important; }
+
+.woocommerce-privacy-policy-text p {
+  font-size: 14px;
+  font-weight: 400 !important;
+  font-family: "Poppins" !important;
+  color: #8f8f8f !important; }
+  .woocommerce-privacy-policy-text p a {
+    color: #333 !important; }
+
+.entry-header .entry-title {
+  display: none; }
+
+.woocommerce form .form-row {
+  margin: 0 0 15px; }
+
+.woocommerce-Input .woocommerce-Input--text .input-text::placeholder {
+  font-family: "Poppins" !important; }
 
 /*# sourceMappingURL=style.css.map */

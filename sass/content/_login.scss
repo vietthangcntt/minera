@@ -1,25 +1,107 @@
-.col-1 {
-	max-width: 100% !important;
-}
-
-.col-2 {
-	max-width: 100% !important;
-}
 
 .u-column2 {
-	float: right !important;
+	padding: 0;
+	padding-left: 100px !important;
+
 	h2 {
 		font-size: 18px;
 		font-weight: $weight;
 		font-family: $font;
+
+	}
+}
+.u-column1 {
+	padding: 0;
+	padding-left: 0 !important;
+	h2 {
+		font-size: 18px;
+		font-weight: $weight;
+		font-family: $font;
+		background: #e8e8e8;
+		padding: 20px 30px;
+		margin: 0;
+	}
+	.login {
+		background: #f3f3f3;
+		padding: 30px !important;
+	}
+}
+.woocommerce .col2-set, .woocommerce-page .col2-set {
+	display: flex;
+}
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.form-title {
+	font-size: 14px;
+	font-weight: $weight;
+	font-family: $font;
+	color: $color-gray;
+}
+
+.form-span {
+	font-size: 12px;
+	font-weight: $weight;
+	font-family: $font;
+	color: $color-gray;	
+}
+
+.form-pas {
+	font-size: 12px;
+	font-weight: $weight;
+	font-family: $font;
+	color: $color-black;
+	float: right;
+}
+
+.woocommerce-LostPassword {
+	.woocommerce-Button {
+		background: $color-black;
+		color: #fff !important;
+		border-radius: 0 !important;
+	}
+}
+.woocommerce-FormRow {
+	.woocommerce-Button {
+		background: $color-black;
+		color: #fff !important;
+		border-radius: 0 !important;
+	}
+}
+.form-title-2 {
+	font-size: 14px;
+	font-weight: $weight;
+	font-family: $font;
+	color: $color-gray;
+	.required {
+		color: $color-black;
 	}
 }
 
-.u-column1 {
-	float: left !important;
-	h2 {
-		font-size: 18px;
+.woocommerce-privacy-policy-text {
+	p {
+		font-size: 14px;
 		font-weight: $weight;
 		font-family: $font;
+		color: $color-gray;
+		a {
+			color: $color-black;
+		}
 	}
+}
+
+.entry-header {
+	.entry-title {
+		display: none;
+	}
+}
+
+.woocommerce form .form-row {
+	margin: 0 0 15px;
+}
+
+.woocommerce-Input .woocommerce-Input--text .input-text::placeholder {
+	font-family: $font;
 }
