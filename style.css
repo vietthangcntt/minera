@@ -6149,22 +6149,21 @@ contact
   border: none;
   border-bottom: 1px solid #333 !important;
   border-radius: 0;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  width: 100%; }
 
 .email-403 input {
   height: 50px;
   border: none;
   border-bottom: 1px solid #333 !important;
-  border-radius: 0; }
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 15px; }
 
 .textarea-583 textarea {
   border: none;
   border-bottom: 1px solid #333 !important;
   border-radius: 0; }
-
-.btn-contact {
-  color-black: #333 !important;
-  color: #fff; }
 
 .elementor-widget-wrap {
   position: relative; }
@@ -6179,7 +6178,27 @@ contact
   .elementor-widget-wrap .elementor-element-d942fa6 {
     position: absolute;
     top: 30%;
-    left: 25%; }
+    left: 44%; }
+
+.wpcf7-form .btn-contact {
+  background-color: #333 !important;
+  color: #fff !important;
+  padding: 20px !important;
+  font-family: "Poppins" !important;
+  width: 100%;
+  margin-top: 30px; }
+
+.elementor-element-fb4de3f {
+  margin-bottom: 50px; }
+  .elementor-element-fb4de3f .elementor-column-gap-default {
+    border-bottom: 1px solid #8f8f8f !important; }
+    .elementor-element-fb4de3f .elementor-column-gap-default .elementor-row {
+      padding-bottom: 30px; }
+
+.elementor-103 .elementor-element.elementor-element-d942fa6 .elementor-divider-separator {
+  width: 70px !important;
+  height: 4px;
+  border-top-color: #ffffffc9 !important; }
 
 /*
 search
@@ -6226,5 +6245,17 @@ search
 .search .site-main .product {
   width: 50%;
   float: left; }
+
+/*
+about
+*/
+.text-size {
+  width: 250px; }
+
+.elementor-element-bd836cb .elementor-column-gap-default {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee; }
+  .elementor-element-bd836cb .elementor-column-gap-default .elementor-row {
+    padding: 80px 0; }
 
 /*# sourceMappingURL=style.css.map */

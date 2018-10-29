@@ -5,6 +5,7 @@
 	    border-bottom: 1px solid $color-black;
 	    border-radius: 0;
 	    margin-bottom: 15px;
+	    width: 100%;
 	}
 }
 .email-403 {
@@ -13,6 +14,8 @@
 	    border: none;
 	    border-bottom: 1px solid $color-black;
 	    border-radius: 0;
+	    width: 100%;
+	    margin-bottom: 15px;
 	}
 }
 
@@ -24,18 +27,12 @@
 	}
 }
 
-.btn-contact {
-	color-black: $color-black;
-	color: #fff;
-}
-
 .elementor-widget-wrap {
 	position: relative;
 	.elementor-element-835b0a4 {
 	    position: absolute;
 	    top: 40%;
 	    left: 30%;
-
 	}
 	.elementor-element-6339b2a {
 	    position: absolute;
@@ -46,6 +43,33 @@
 	.elementor-element-d942fa6 {
 	    position: absolute;
 	    top: 30%;
-	    left: 25%;
+	    left: 44%;
 	}
+}
+.wpcf7-form{
+	.btn-contact {
+		background-color: $color-black;
+		color: #fff !important;
+		padding: 20px !important;
+		font-family: $font;
+		width: 100%;
+		margin-top: 30px;
+	}
+}
+
+.elementor-element-fb4de3f {
+	margin-bottom: 50px;
+	.elementor-column-gap-default {
+		border-bottom: 1px solid $color-gray;
+		.elementor-row {
+			padding-bottom: 30px;
+		}
+	}
+
+}
+
+.elementor-103 .elementor-element.elementor-element-d942fa6 .elementor-divider-separator {
+	width: 70px !important;
+	height: 4px;
+	border-top-color: #ffffffc9 !important;
 }
