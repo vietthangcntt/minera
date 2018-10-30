@@ -26,3 +26,18 @@ namespace Elementor;
 			)
 		 );
 	}
+
+
+/*
+.*.Elementor add product
+*/
+	add_action( "elementor/elements/product_registered", "Elementor\minera_product_widget_elementor" );
+	function minera_product_widget_elementor( $elements_product )
+	{
+		$elements_product->add_category(
+			'minera_product',
+			array(
+				'title' => __( 'Minera produc', 'minera' ),
+			)
+		 );
+	}

@@ -3,6 +3,10 @@
 		width: 100%;
 		margin-bottom: 30px;
 	}
+
+	.elementor-page .main-navigation a {
+		padding: 0 10px;
+	}
 }
 @media (max-width: 1076px ) {
 	.main-navigation a {
@@ -14,9 +18,14 @@
 	.woocommerce ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-2 li.product {
 		width: 100%;
 	}
-	.p-content {
-		float: none;
-		padding: 0;
+	.elementor-page ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-2 li.product {
+		width: 100%;
+	}
+	.woocommerce ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-3 li.product {
+		width: 100%;
+	}
+	.elementor-page ul.products.columns-2 li.product, .woocommerce-page ul.products.columns-3 li.product {
+		width: 100%;
 	}
 	.woocommerce-ordering {
 		display: none;
@@ -26,6 +35,16 @@
 	}
 	.bread-spacing-bot {
 		height: 100px;
+	}
+	.elementor .columns-3 li {
+		width: 50%;
+	}
+	.elementor .columns-4 li {
+		width: 50%;
+	}
+	.elementor-section.elementor-section-boxed > .elementor-container {
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 }
@@ -192,6 +211,13 @@
 	.elementor-146 .elementor-element.elementor-element-0f44570 {
 		text-align: center !important;
 	}
+	.p-content {
+		text-align: left;
+	}
+	.columns-1 .p-content {
+		margin-left: 0;
+	}
+
 
 }
 @media (max-width: 768px) {
@@ -204,10 +230,28 @@
 	.columns-2 .p-head {
 		width: 100%;
 	}
+
+	.elementor .columns-3 li {
+		width: 100%;
+	}
+	.elementor .columns-4 li {
+		width: 100%;
+	}
+	.columns-3 .p-head {
+		width: 100%;
+	}
 	.related ul li {
 		width: 100% !important;
 	}
 	.columns-2 .p-content {
+		width: 100%;
+		padding: 0;
+	}
+	.columns-3 .p-content {
+		width: 100%;
+		padding: 0;
+	}
+	.columns-4 .p-content {
 		width: 100%;
 		padding: 0;
 	}
@@ -220,4 +264,44 @@
 		padding-left: 15px !important;
 	}
 
+	.p-content {
+		float: none;
+		padding: 0;
+	}
+	.elementor-page .p-content {
+		float: none;
+		padding: 0;
+	    padding-left: 15px;
+   		padding-right: 15px;
+	}
+	.elementor-section.elementor-section-boxed > .elementor-container {
+		padding: 0;
+	}
+	.elementor-widget-container ul {
+		padding: 0;
+	}
+	.onsale {
+    	left: 65px;
+	}
+	.elementor-page .p-content {
+	    padding-left: 60px;
+	}
+
+}
+
+@media (max-width: 375px) {
+	.elementor-page .p-content {
+		float: none;
+		padding: 0;
+	    padding-left: 40px;
+   		padding-right: 15px;
+	}
+	.onsale {
+    left: 45px;
+}
+
+@media (max-width: 360px) {
+	.columns-4 .p-head {
+		float: none;
+	}
 }

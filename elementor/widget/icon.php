@@ -119,17 +119,80 @@ class Widget_Minera_icon extends Widget_Base
 				'default'  => 'h3'
 			]
 		);
+
 		$this->end_controls_section();
-		$this->start_controls_section(
-			'section_style_icon',
+
+
+		$this->start_controls_section (
+			'style',
 			[
-				'label'    => esc_html__( 'Icon', 'minera' ),
-				'tab'      => Controls_Manager::TAB_STYLE,
-				'condition'=> [
-					'icon!' => ''
-				]
+				'label'   => esc_html__('icon', 'minera'),
+				'tab'     => Controls_Manager:: TAB_STYLE,
 			]
 		);
+
+		$this->add_control(
+			'title_color',
+			[
+				'label'     => esc_html__('Title color', 'minera'),
+				'type'      => Controls_Manager::COLOR,
+				'scheme'  => [
+					'type' => Scheme_Color::get_type(),
+					'value' => Scheme_Color::COLOR_1,
+				],
+				'selectors'  => [
+					'{{WRAPPER}} .icon-box-title' => 'color: {{VALUE}}',
+				]
+
+			]
+		);
+
+		$this->add_control(
+			'decription_color',
+			[
+				'label'   => esc_html__('Description color', 'minera'),
+				'type'    => Controls_Manager::COLOR,
+				'scheme'  => [
+					'type'  => Scheme_Color::get_type(),
+					'value' => Scheme_Color::COLOR_1,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .minera_icon_box p' => 'color: {{VALUE}}',
+				]
+
+			]
+		);
+
+		$this->add_responsive_control(
+			'decription_size',
+			[
+				'label'     => esc_html__( 'Size', 'minera' ),
+				'type'      => Controls_manager::SLIDER,
+				'range'     => [
+					'px' => [
+						'min' => 10,
+						'max' => 300
+					]
+				],
+				'selectors' => [ '{{WRAPPER}}  .minera_icon_box p' => 'font-size: {{SIZE}}{{UNIT}};' ]
+			]
+		);
+
+		$this->add_responsive_control(
+			'size_title',
+			[
+				'label'     => esc_html__( 'Size title', 'minera' ),
+				'type'      => Controls_manager::SLIDER,
+				'range'     => [
+					'px' => [
+						'min' => 10,
+						'max' => 300
+					]
+				],
+				'selectors' => [ '{{WRAPPER}} .icon-box-title *' => 'font-size: {{SIZE}}{{UNIT}};' ]
+			]
+		);
+
 		$this->start_controls_tab(
 			'icon_hover_color',
 			[
@@ -174,8 +237,8 @@ class Widget_Minera_icon extends Widget_Base
 					]
 				],
 				'selectors' =>[
-					'{{WRAPPER}} .minera-icon-box .minera-icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-					'(mobile){{WRAPPER}} .minera-icon-box .minera-icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .minera_icon_box .meria-icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'(mobile){{WRAPPER}} .minera_icon_box .meria-icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				]
 			]
 		);
@@ -194,20 +257,21 @@ class Widget_Minera_icon extends Widget_Base
 				'selectors' => [ '{{WRAPPER}}  .minera_icon_box .meria-icon .fa' => 'font-size: {{SIZE}}{{UNIT}};' ]
 			]
 		);
-
 		$this->add_control(
-			'color_text_description_content_box',
+			'hover_icon_color',
 			[
-				'label'     => esc_html__( 'Color', 'minera' ),
-				'type'      => Controls_Manager::COLOR,
-				'default'   => '#000',
-				'scheme'    => [
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1
-				],
-				'selectors' => [ '{{WRAPPER}} .minera-icon-box .minera-content-icon-box .text-description' => 'color: {{VALUE}};' ],
+				'label'      => esc_html__( 'Color hover', 'minera' ),
+				'type'       => Controls_Manager::COLOR,
+				'default'    => '#222222',
+				'selectors'  => [
+					'{{WRAPPER}}  .minera_icon_box .meria-icon .fa:hover' => 'color: {{VALUE}}'
+				]
 			]
 		);
+		$this->end_controls_tab();
+
+		$this->end_controls_section();
+
 	}
 	protected function render()
 	{
