@@ -6309,4 +6309,13 @@ content
         .share-product-with ul li a i {
           color: #8f8f8f !important; }
 
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-danger {
+  background-color: #d9534f !important; }
+
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-success {
+  background-color: #5cb85c !important; }
+
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-warning {
+  background-color: #f0ad4e !important; }
+
 /*# sourceMappingURL=style.css.map */
