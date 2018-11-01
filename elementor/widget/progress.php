@@ -59,7 +59,8 @@ class widget_Minera_progress extends Widget_Base {
 					'warning' => esc_html__('warning', 'minera' ),
 					'danger'  => esc_html__('danger','minera'),
 
-				], 
+				],
+
 			]
 		);
 
@@ -73,6 +74,9 @@ class widget_Minera_progress extends Widget_Base {
 					'unit'  => '%',
 				],
 				'label_lock'  => true,
+				'sections'    => [
+					'{{WRAPPER}} .elementor-progress-wrapper  '  => 'width: {{SIZE}}{{UNIT}};'
+				],
  			]
 		);
 
@@ -132,7 +136,7 @@ class widget_Minera_progress extends Widget_Base {
 					'value' => Scheme_Color:: COLOR_1,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-progress-wrapper ' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-progress-wrapper .elementor-progress-bar ' => 'background-color: {{VALUE}};',
 				]
 
 			]
@@ -222,15 +226,16 @@ class widget_Minera_progress extends Widget_Base {
 			<span class="elementor-title"><?php echo $settings['title']; ?></span>
 		<?php } ?>
 
-		<div id="myItem1"></div>
-
 
 		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
-			<div <?php echo $this->get_render_attribute_string( 'progress-bar' ); ?>>
-				<span class="elementor-progress-text"><?php echo $settings['inner_text']; ?></span>
-				<?php if ( 'hiden' != $settings['display_percentage'] ) { ?>
-					<span class="elementor-progress-percentage"><?php echo $settings['percent']['size']; ?>%</span>
-				<?php } ?>
+			<div id="thing-demo">
+            	<div class="skin-bar" data-per="<?php echo $settings['percent']['size']; ?>">
+					<span class="elementor-progress-text"><?php echo $settings['inner_text']; ?></span>
+					<?php if ( 'hiden' != $settings['display_percentage'] ) { ?>
+						<span class="elementor-progress-percentage"><?php echo $settings['percent']['size']; ?>%</span>
+					<?php } ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	<?php

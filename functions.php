@@ -318,11 +318,12 @@ function minera_scripts() {
 	wp_enqueue_style('slick-css');
 	wp_register_style('slick-theme',get_template_directory_uri().'/css/slick-theme.css','all');
 	wp_enqueue_style('slick-theme');
+	wp_enqueue_style('progress-css',get_template_directory_uri().'/css/progress.css','all');
 
 
 
 
-	wp_register_script(
+	wp_enqueue_script(
 		'progress',
 		get_template_directory_uri().'/js/progress.js',
 		array( 'jquery' ),
@@ -330,13 +331,14 @@ function minera_scripts() {
 		true
 	);
 
-	wp_register_script(
+	wp_enqueue_script(
 		'progress-handle',
 		get_template_directory_uri().'/js/progress-handle.js',
 		array( 'progress' ),
 		null,
 		true
 	);
+	
 	
 
 	wp_enqueue_script( 'minera-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -353,6 +355,16 @@ function minera_scripts() {
 add_action( 'wp_enqueue_scripts', 'minera_scripts' );
 
 
+add_action( 'elementor/preview/enqueue_scripts', 'demo2' );
+function demo2() {
+	wp_enqueue_script(
+		'demo',
+		get_template_directory_uri().'/js/demo.js',
+		array(),
+		null,
+		true
+	);
+}
 
 add_action( 'elementor/frontend/after_register_scripts', 'demo' );
 function demo() {

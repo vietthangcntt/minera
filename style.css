@@ -6309,13 +6309,23 @@ content
         .share-product-with ul li a i {
           color: #8f8f8f !important; }
 
-.elementor-widget-minera_progress .elementor-progress-wrapper.progress-danger {
-  background-color: #d9534f !important; }
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-danger .skin-bar {
+  background-color: #d9534f; }
 
-.elementor-widget-minera_progress .elementor-progress-wrapper.progress-success {
-  background-color: #5cb85c !important; }
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-success .skin-bar {
+  background-color: #5cb85c; }
 
-.elementor-widget-minera_progress .elementor-progress-wrapper.progress-warning {
-  background-color: #f0ad4e !important; }
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-warning .skin-bar {
+  background-color: #f0ad4e; }
+
+.elementor-widget-minera_progress .elementor-progress-wrapper.progress-info .skin-bar {
+  background-color: #6ec1e4; }
+
+.elementor-progress-percentage {
+  float: right; }
+
+.skin-bar {
+  width: 0px;
+  height: 30px; }
 
 /*# sourceMappingURL=style.css.map */

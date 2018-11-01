@@ -3,16 +3,6 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-/**
- * Elementor minera icon box widget.
- *
- * Elementor widget that displays an icon, a headline and a text.
- *
- * @since 1.0.0
- */
-/**
- * 
- */
 class Widget_Minera_carousel extends Widget_Base {
 	public function get_name() {
 		return 'minera_carousel';
@@ -31,14 +21,14 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_image_carousel',
 			[
-				'label' => __( 'Image Carousel', 'minera' ),
+				'label' => esc_html__( 'Image Carousel', 'minera' ),
 			]
 		);
 
 		$this->add_control(
 			'carousel',
 			[
-				'label' => __( 'Add Images', 'minera' ),
+				'label' => esc_html__( 'Add Images', 'minera' ),
 				'type' => Controls_Manager::GALLERY,
 				'default' => [],
 			]
@@ -58,10 +48,10 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'slides_to_show',
 			[
-				'label' => __( 'Slides to Show', 'minera' ),
+				'label' => esc_html__( 'Slides to Show', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'minera' ),
+					'' => esc_html__( 'Default', 'minera' ),
 				] + $slides_to_show,
 				'frontend_available' => true,
 			]
@@ -70,7 +60,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'slides_to_scroll',
 			[
-				'label' => __( 'Slides to Scroll', 'minera' ),
+				'label' => esc_html__( 'Slides to Scroll', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => $slides_to_show,
@@ -84,12 +74,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_stretch',
 			[
-				'label' => __( 'Image Stretch', 'minera' ),
+				'label' => esc_html__( 'Image Stretch', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'no',
 				'options' => [
-					'no' => __( 'No', 'minera' ),
-					'yes' => __( 'Yes', 'minera' ),
+					'no' => esc_html__( 'No', 'minera' ),
+					'yes' => esc_html__( 'Yes', 'minera' ),
 				],
 			]
 		);
@@ -97,14 +87,14 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'navigation',
 			[
-				'label' => __( 'Navigation', 'minera' ),
+				'label' => esc_html__( 'Navigation', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'both',
 				'options' => [
-					'both' => __( 'Arrows and Dots', 'minera' ),
-					'arrows' => __( 'Arrows', 'minera' ),
-					'dots' => __( 'Dots', 'minera' ),
-					'none' => __( 'None', 'minera' ),
+					'both' => esc_html__( 'Arrows and Dots', 'minera' ),
+					'arrows' => esc_html__( 'Arrows', 'minera' ),
+					'dots' => esc_html__( 'Dots', 'minera' ),
+					'none' => esc_html__( 'None', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -113,13 +103,13 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'link_to',
 			[
-				'label' => __( 'Link to', 'minera' ),
+				'label' => esc_html__( 'Link to', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'none',
 				'options' => [
-					'none' => __( 'None', 'minera' ),
-					'file' => __( 'Media File', 'minera' ),
-					'custom' => __( 'Custom URL', 'minera' ),
+					'none' => esc_html__( 'None', 'minera' ),
+					'file' => esc_html__( 'Media File', 'minera' ),
+					'custom' => esc_html__( 'Custom URL', 'minera' ),
 				],
 			]
 		);
@@ -129,7 +119,7 @@ class Widget_Minera_carousel extends Widget_Base {
 			[
 				'label' => 'Link to',
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'http://your-link.com', 'minera' ),
+				'placeholder' => esc_html__( 'http://your-link.com', 'minera' ),
 				'condition' => [
 					'link_to' => 'custom',
 				],
@@ -140,13 +130,13 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'open_lightbox',
 			[
-				'label' => __( 'Lightbox', 'minera' ),
+				'label' => esc_html__( 'Lightbox', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
-					'default' => __( 'Default', 'minera' ),
-					'yes' => __( 'Yes', 'minera' ),
-					'no' => __( 'No', 'minera' ),
+					'default' => esc_html__( 'Default', 'minera' ),
+					'yes' => esc_html__( 'Yes', 'minera' ),
+					'no' => esc_html__( 'No', 'minera' ),
 				],
 				'condition' => [
 					'link_to' => 'file',
@@ -157,14 +147,14 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'caption_type',
 			[
-				'label' => __( 'Caption', 'minera' ),
+				'label' => esc_html__( 'Caption', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'None', 'minera' ),
-					'title' => __( 'Title', 'minera' ),
-					'caption' => __( 'Caption', 'minera' ),
-					'description' => __( 'Description', 'minera' ),
+					'' => esc_html__( 'None', 'minera' ),
+					'title' => esc_html__( 'Title', 'minera' ),
+					'caption' => esc_html__( 'Caption', 'minera' ),
+					'description' => esc_html__( 'Description', 'minera' ),
 				],
 			]
 		);
@@ -172,7 +162,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
-				'label' => __( 'View', 'minera' ),
+				'label' => esc_html__( 'View', 'minera' ),
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -180,23 +170,22 @@ class Widget_Minera_carousel extends Widget_Base {
 
 		$this->end_controls_section();
 
-
 		$this->start_controls_section(
 			'section_additional_options',
 			[
-				'label' => __( 'Additional Options', 'minera' ),
+				'label' => esc_html__( 'Additional Options', 'minera' ),
 			]
 		);
 
 		$this->add_control(
 			'pause_on_hover',
 			[
-				'label' => __( 'Pause on Hover', 'minera' ),
+				'label' => esc_html__( 'Pause on Hover', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
-					'yes' => __( 'Yes', 'minera' ),
-					'no' => __( 'No', 'minera' ),
+					'yes' => esc_html__( 'Yes', 'minera' ),
+					'no' => esc_html__( 'No', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -205,12 +194,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'minera' ),
+				'label' => esc_html__( 'Autoplay', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
-					'yes' => __( 'Yes', 'minera' ),
-					'no' => __( 'No', 'minera' ),
+					'yes' => esc_html__( 'Yes', 'minera' ),
+					'no' => esc_html__( 'No', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -219,7 +208,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'autoplay_speed',
 			[
-				'label' => __( 'Autoplay Speed', 'minera' ),
+				'label' => esc_html__( 'Autoplay Speed', 'minera' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 5000,
 				'frontend_available' => true,
@@ -229,12 +218,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'infinite',
 			[
-				'label' => __( 'Infinite Loop', 'minera' ),
+				'label' => esc_html__( 'Infinite Loop', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
-					'yes' => __( 'Yes', 'minera' ),
-					'no' => __( 'No', 'minera' ),
+					'yes' => esc_html__( 'Yes', 'minera' ),
+					'no' => esc_html__( 'No', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -243,12 +232,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'effect',
 			[
-				'label' => __( 'Effect', 'minera' ),
+				'label' => esc_html__( 'Effect', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'slide',
 				'options' => [
-					'slide' => __( 'Slide', 'minera' ),
-					'fade' => __( 'Fade', 'minera' ),
+					'slide' => esc_html__( 'Slide', 'minera' ),
+					'fade' => esc_html__( 'Fade', 'minera' ),
 				],
 				'condition' => [
 					'slides_to_show' => '1',
@@ -260,7 +249,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'speed',
 			[
-				'label' => __( 'Animation Speed', 'minera' ),
+				'label' => esc_html__( 'Animation Speed', 'minera' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 500,
 				'frontend_available' => true,
@@ -270,12 +259,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'direction',
 			[
-				'label' => __( 'Direction', 'minera' ),
+				'label' => esc_html__( 'Direction', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'ltr',
 				'options' => [
-					'ltr' => __( 'Left', 'minera' ),
-					'rtl' => __( 'Right', 'minera' ),
+					'ltr' => esc_html__( 'Left', 'minera' ),
+					'rtl' => esc_html__( 'Right', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -283,10 +272,11 @@ class Widget_Minera_carousel extends Widget_Base {
 
 		$this->end_controls_section();
 
+
 		$this->start_controls_section(
 			'section_style_navigation',
 			[
-				'label' => __( 'Navigation', 'minera' ),
+				'label' => esc_html__( 'Navigation', 'minera' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'navigation' => [ 'arrows', 'dots', 'both' ],
@@ -297,7 +287,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'heading_style_arrows',
 			[
-				'label' => __( 'Arrows', 'minera' ),
+				'label' => esc_html__( 'Arrows', 'minera' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -309,12 +299,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'arrows_position',
 			[
-				'label' => __( 'Arrows Position', 'minera' ),
+				'label' => esc_html__( 'Arrows Position', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'inside',
 				'options' => [
-					'inside' => __( 'Inside', 'minera' ),
-					'outside' => __( 'Outside', 'minera' ),
+					'inside' => esc_html__( 'Inside', 'minera' ),
+					'outside' => esc_html__( 'Outside', 'minera' ),
 				],
 				'condition' => [
 					'navigation' => [ 'arrows', 'both' ],
@@ -325,7 +315,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'arrows_size',
 			[
-				'label' => __( 'Arrows Size', 'minera' ),
+				'label' => esc_html__( 'Arrows Size', 'minera' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -345,7 +335,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'arrows_color',
 			[
-				'label' => __( 'Arrows Color', 'minera' ),
+				'label' => esc_html__( 'Arrows Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-prev:before, {{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-next:before' => 'color: {{VALUE}};',
@@ -359,7 +349,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'heading_style_dots',
 			[
-				'label' => __( 'Dots', 'minera' ),
+				'label' => esc_html__( 'Dots', 'minera' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -371,12 +361,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'dots_position',
 			[
-				'label' => __( 'Dots Position', 'minera' ),
+				'label' => esc_html__( 'Dots Position', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'outside',
 				'options' => [
-					'outside' => __( 'Outside', 'minera' ),
-					'inside' => __( 'Inside', 'minera' ),
+					'outside' => esc_html__( 'Outside', 'minera' ),
+					'inside' => esc_html__( 'Inside', 'minera' ),
 				],
 				'condition' => [
 					'navigation' => [ 'dots', 'both' ],
@@ -387,7 +377,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'dots_size',
 			[
-				'label' => __( 'Dots Size', 'minera' ),
+				'label' => esc_html__( 'Dots Size', 'minera' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -407,7 +397,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'dots_color',
 			[
-				'label' => __( 'Dots Color', 'minera' ),
+				'label' => esc_html__( 'Dots Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-dots li button:before' => 'color: {{VALUE}};',
@@ -417,12 +407,14 @@ class Widget_Minera_carousel extends Widget_Base {
 				],
 			]
 		);
-		$this->end_controls_section(); 
+
+		$this->end_controls_section();
+
 
 		$this->start_controls_section(
 			'section_style_image',
 			[
-				'label' => __( 'Image', 'minera' ),
+				'label' => esc_html__( 'Image', 'minera' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -430,11 +422,11 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_spacing',
 			[
-				'label' => __( 'Spacing', 'minera' ),
+				'label' => esc_html__( 'Spacing', 'minera' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'minera' ),
-					'custom' => __( 'Custom', 'minera' ),
+					'' => esc_html__( 'Default', 'minera' ),
+					'custom' => esc_html__( 'Custom', 'minera' ),
 				],
 				'default' => '',
 				'condition' => [
@@ -446,7 +438,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_spacing_custom',
 			[
-				'label' => __( 'Image Spacing', 'minera' ),
+				'label' => esc_html__( 'Image Spacing', 'minera' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -472,7 +464,7 @@ class Widget_Minera_carousel extends Widget_Base {
 			Group_Control_Border::get_type(),
 			[
 				'name' => 'image_border',
-				'selector' => '{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-slide-image',
+				'selectors' => '{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-slide-image',
 				'separator' => 'before',
 			]
 		);
@@ -480,7 +472,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'minera' ),
+				'label' => esc_html__( 'Border Radius', 'minera' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -556,7 +548,9 @@ class Widget_Minera_carousel extends Widget_Base {
 		);
 
 		$this->end_controls_section();
+
 	}
+
 	protected function render() {
 		$settings = $this->get_settings();
 
@@ -638,7 +632,6 @@ class Widget_Minera_carousel extends Widget_Base {
 		<?php
 	}
 
-
 	private function get_link_url( $attachment, $instance ) {
 		if ( 'none' === $instance['link_to'] ) {
 			return false;
@@ -656,7 +649,6 @@ class Widget_Minera_carousel extends Widget_Base {
 			'url' => wp_get_attachment_url( $attachment['id'] ),
 		];
 	}
-
 
 	private function get_image_caption( $attachment ) {
 		$caption_type = $this->get_settings( 'caption_type' );
