@@ -1,0 +1,15 @@
+.elementor .slick-prev:before {
+	content: "\f104";
+	font-family: fontawesome;
+}
+.elementor .slick-next:before {
+	font-family: fontawesome;
+	content: "\f105";
+}
+
+.elementor .slick-arrows-inside .slick-prev {
+	left: 20px;
+}
+.elementor .slick-arrows-inside .slick-next {
+	right: 20px;
+}

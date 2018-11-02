@@ -136,7 +136,7 @@ class widget_Minera_progress extends Widget_Base {
 					'value' => Scheme_Color:: COLOR_1,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-progress-wrapper .elementor-progress-bar ' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .skin-bar' => 'background-color: {{VALUE}};',
 				]
 
 			]
@@ -148,7 +148,7 @@ class widget_Minera_progress extends Widget_Base {
 				'label' => __( 'Background Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-progress-wrapper .elementor-progress-bar' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} #thing-demo' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -159,7 +159,7 @@ class widget_Minera_progress extends Widget_Base {
 				'label' => __( 'Inner Text Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-progress-bar' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .skin-bar span' => 'color: {{VALUE}};',
 				],
 			]
 		);

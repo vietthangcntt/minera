@@ -33,7 +33,6 @@ class Widget_Minera_carousel extends Widget_Base {
 				'default' => [],
 			]
 		);
-
 		$this->add_group_control(
 			Group_Control_Image_Size::get_type(),
 			[
@@ -324,7 +323,7 @@ class Widget_Minera_carousel extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-prev:before, {{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-next:before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .slick-prev:before, {{WRAPPER}} .slick-next:before' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'navigation' => [ 'arrows', 'both' ],
@@ -338,7 +337,7 @@ class Widget_Minera_carousel extends Widget_Base {
 				'label' => esc_html__( 'Arrows Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-prev:before, {{WRAPPER}} .elementor-image-carousel-wrapper .slick-slider .slick-next:before' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .slick-prev:before, {{WRAPPER}} .slick-next:before' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'navigation' => [ 'arrows', 'both' ],
@@ -557,56 +556,6 @@ class Widget_Minera_carousel extends Widget_Base {
 		if ( empty( $settings['carousel'] ) ) {
 			return;
 		}
-
-		$slides = [];
-
-		foreach ( $settings['carousel'] as $index => $attachment ) {
-			$image_url = Group_Control_Image_Size::get_attachment_image_src( $attachment['id'], 'thumbnail', $settings );
-
-			$image_html = '<img class="slick-slide-image" src="' . esc_attr( $image_url ) . '" alt="' . esc_attr( Control_Media::get_image_alt( $attachment ) ) . '" />';
-
-			$link = $this->get_link_url( $attachment, $settings );
-
-			if ( $link ) {
-				$link_key = 'link_' . $index;
-
-				$this->add_render_attribute( $link_key, [
-					'href' => $link['url'],
-					'class' => 'elementor-clickable',
-					'data-elementor-open-lightbox' => $settings['open_lightbox'],
-					'data-elementor-lightbox-slideshow' => $this->get_id(),
-					'data-elementor-lightbox-index' => $index,
-				] );
-
-				if ( ! empty( $link['is_external'] ) ) {
-					$this->add_render_attribute( $link_key, 'target', '_blank' );
-				}
-
-				if ( ! empty( $link['nofollow'] ) ) {
-					$this->add_render_attribute( $link_key, 'rel', 'nofollow' );
-				}
-
-				$image_html = '<a ' . $this->get_render_attribute_string( $link_key ) . '>' . $image_html . '</a>';
-			}
-
-			$image_caption = $this->get_image_caption( $attachment );
-
-			$slide_html = '<div class="slick-slide"><figure class="slick-slide-inner">' . $image_html;
-
-			if ( ! empty( $image_caption ) ) {
-				$slide_html .= '<figcaption class="elementor-image-carousel-caption">' . $image_caption . '</figcaption>';
-			}
-
-			$slide_html .= '</figure></div>';
-
-			$slides[] = $slide_html;
-
-		}
-
-		if ( empty( $slides ) ) {
-			return;
-		}
-
 		$this->add_render_attribute( 'carousel', 'class', 'elementor-image-carousel' );
 
 		if ( 'none' !== $settings['navigation'] ) {
@@ -623,51 +572,25 @@ class Widget_Minera_carousel extends Widget_Base {
 			$this->add_render_attribute( 'carousel', 'class', 'slick-image-stretch' );
 		}
 
+		$args = array(
+			"slidesToShow" => '' != $settings['slides_to_show'] ? intval( $settings['slides_to_show'] ) : 4,
+			"slidesToScroll" => intval( $settings['slides_to_scroll'] ),
+		);
+
+		$data = "data-slick='" . json_encode( $args ) . "'";
+
 		?>
-		<div class="elementor-image-carousel-wrapper elementor-slick-slider" dir="<?php echo $settings['direction']; ?>">
-			<div <?php echo $this->get_render_attribute_string( 'carousel' ); ?>>
-				<?php echo implode( '', $slides ); ?>
-			</div>
+		<div class="carousel-widget"<?php echo $data; ?>>
+			<?php
+				foreach ($settings['carousel'] as $key) {
+				?>
+					<div><img src="<?php echo $key['url']; ?>" alt=""></div>
+				<?php
+				}
+			?>
 		</div>
 		<?php
-	}
 
-	private function get_link_url( $attachment, $instance ) {
-		if ( 'none' === $instance['link_to'] ) {
-			return false;
-		}
-
-		if ( 'custom' === $instance['link_to'] ) {
-			if ( empty( $instance['link']['url'] ) ) {
-				return false;
-			}
-
-			return $instance['link'];
-		}
-
-		return [
-			'url' => wp_get_attachment_url( $attachment['id'] ),
-		];
-	}
-
-	private function get_image_caption( $attachment ) {
-		$caption_type = $this->get_settings( 'caption_type' );
-
-		if ( empty( $caption_type ) ) {
-			return '';
-		}
-
-		$attachment_post = get_post( $attachment['id'] );
-
-		if ( 'caption' === $caption_type ) {
-			return $attachment_post->post_excerpt;
-		}
-
-		if ( 'title' === $caption_type ) {
-			return $attachment_post->post_title;
-		}
-
-		return $attachment_post->post_content;
 	}
 }
 Plugin::instance()->widgets_manager->register_widget_type( new Widget_Minera_carousel() );
