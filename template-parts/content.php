@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php minera_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -28,9 +29,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php minera_post_thumbnail(); ?>
-
+	<h2 class="title-post-blog"> <?php echo get_the_title(); ?> </h2>
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(

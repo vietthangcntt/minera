@@ -208,12 +208,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => esc_html__( 'Autoplay', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Autoplay', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
 					'yes' => esc_html__( 'Yes', 'minera' ),
-					'no' => esc_html__( 'No', 'minera' ),
+					'no'  => esc_html__( 'No', 'minera' ),
 				],
 				'frontend_available' => true,
 			]
@@ -246,12 +246,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'effect',
 			[
-				'label' => esc_html__( 'Effect', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Effect', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'slide',
 				'options' => [
 					'slide' => esc_html__( 'Slide', 'minera' ),
-					'fade' => esc_html__( 'Fade', 'minera' ),
+					'fade'  => esc_html__( 'Fade', 'minera' ),
 				],
 				'condition' => [
 					'slides_to_show' => '1',
@@ -263,9 +263,9 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'speed',
 			[
-				'label' => esc_html__( 'Animation Speed', 'minera' ),
-				'type' => Controls_Manager::NUMBER,
-				'default' => 500,
+				'label'              => esc_html__( 'Animation Speed', 'minera' ),
+				'type'               => Controls_Manager::NUMBER,
+				'default'            => 500,
 				'frontend_available' => true,
 			]
 		);
@@ -273,8 +273,8 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'direction',
 			[
-				'label' => esc_html__( 'Direction', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Direction', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'ltr',
 				'options' => [
 					'ltr' => esc_html__( 'Left', 'minera' ),
@@ -311,8 +311,8 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'arrows_position',
 			[
-				'label' => esc_html__( 'Arrows Position', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Arrows Position', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'inside',
 				'options' => [
 					'inside' => esc_html__( 'Inside', 'minera' ),
@@ -325,7 +325,7 @@ class Widget_Minera_carousel extends Widget_Base {
 			'arrows_size',
 			[
 				'label' => esc_html__( 'Arrows Size', 'minera' ),
-				'type' => Controls_Manager::SLIDER,
+				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
 						'min' => 20,
@@ -371,12 +371,12 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'dots_position',
 			[
-				'label' => esc_html__( 'Dots Position', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Dots Position', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'outside',
 				'options' => [
 					'outside' => esc_html__( 'Outside', 'minera' ),
-					'inside' => esc_html__( 'Inside', 'minera' ),
+					'inside'  => esc_html__( 'Inside', 'minera' ),
 				],
 			]
 		);
@@ -385,7 +385,7 @@ class Widget_Minera_carousel extends Widget_Base {
 			'dots_size',
 			[
 				'label' => esc_html__( 'Dots Size', 'minera' ),
-				'type' => Controls_Manager::SLIDER,
+				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
 						'min' => 5,
@@ -455,7 +455,7 @@ class Widget_Minera_carousel extends Widget_Base {
 					'{{WRAPPER}} .slick-slide .slick-slide-inner' => 'padding-left: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'image_spacing' => 'custom',
+					'image_spacing'   => 'custom',
 					'slides_to_show!' => '1',
 				],
 			]
@@ -464,7 +464,7 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Border::get_type(),
 			[
-				'name' => 'image_border',
+				'name'      => 'image_border',
 				'selectors' => '{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-slide-image',
 				'separator' => 'before',
 			]
@@ -473,10 +473,10 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'minera' ),
-				'type' => Controls_Manager::DIMENSIONS,
+				'label'      => esc_html__( 'Border Radius', 'minera' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-slide-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
@@ -508,15 +508,15 @@ class Widget_Minera_carousel extends Widget_Base {
 					],
 					'center' => [
 						'title' => __( 'Center', 'minera' ),
-						'icon' => 'fa fa-align-center',
+						'icon'  => 'fa fa-align-center',
 					],
 					'right' => [
 						'title' => __( 'Right', 'minera' ),
-						'icon' => 'fa fa-align-right',
+						'icon'  => 'fa fa-align-right',
 					],
 					'justify' => [
 						'title' => __( 'Justified', 'minera' ),
-						'icon' => 'fa fa-align-justify',
+						'icon'  => 'fa fa-align-justify',
 					],
 				],
 				'default' => 'center',
@@ -529,9 +529,9 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'caption_text_color',
 			[
-				'label' => __( 'Text Color', 'minera' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+				'label'     => __( 'Text Color', 'minera' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .elementor-image-carousel-caption' => 'color: {{VALUE}};',
 				],
@@ -541,9 +541,9 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'caption_typography',
-				'label' => __( 'Typography', 'minera' ),
-				'scheme' => Scheme_Typography::TYPOGRAPHY_4,
+				'name'     => 'caption_typography',
+				'label'    => __( 'Typography', 'minera' ),
+				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
 				'selector' => '{{WRAPPER}} .elementor-image-carousel-caption',
 			]
 		);

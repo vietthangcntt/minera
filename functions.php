@@ -301,6 +301,17 @@ function woo_rename_tabs( $tabs ) {
 
 }
 
+	/*
+ * add Read More 
+ */
+	function minera_readmore() {
+		return 
+		'<div class="read">
+			<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('READ MORE', 'minera') . '</a>
+		</div>';
+	}
+	add_filter( 'excerpt_more', 'minera_readmore' );
+
 
 
 /**
