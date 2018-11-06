@@ -7,16 +7,19 @@ class Widget_Minera_carousel extends Widget_Base {
 	public function get_name() {
 		return 'minera_carousel';
 	}
+
 	public function get_title() {
 		return 'Minera carousel';
 	}
+
 	public function get_icon() {
 		return 'eicon-slider-push';
 	}
-	public function get_categories()
-	{
+
+	public function get_categories() {
 		return [ 'minera_category' ];
 	}
+
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'section_image_carousel',
@@ -30,14 +33,16 @@ class Widget_Minera_carousel extends Widget_Base {
 			[
 				'label' => esc_html__( 'Add Images', 'minera' ),
 				'type' => Controls_Manager::GALLERY,
-				'default' => [],
+				'default' => ['large'],
 			]
 		);
 		$this->add_group_control(
 			Group_Control_Image_Size::get_type(),
 			[
 				'name' => 'thumbnail',
+				'separator' => 'none',
 			]
+
 		);
 
 		$slides_to_show = range( 1, 10 );
@@ -73,29 +78,13 @@ class Widget_Minera_carousel extends Widget_Base {
 		$this->add_control(
 			'image_stretch',
 			[
-				'label' => esc_html__( 'Image Stretch', 'minera' ),
-				'type' => Controls_Manager::SELECT,
+				'label'   => esc_html__( 'Image Stretch', 'minera' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'no',
 				'options' => [
-					'no' => esc_html__( 'No', 'minera' ),
+					'no'  => esc_html__( 'No', 'minera' ),
 					'yes' => esc_html__( 'Yes', 'minera' ),
 				],
-			]
-		);
-
-		$this->add_control(
-			'navigation',
-			[
-				'label' => esc_html__( 'Navigation', 'minera' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'both',
-				'options' => [
-					'both' => esc_html__( 'Arrows and Dots', 'minera' ),
-					'arrows' => esc_html__( 'Arrows', 'minera' ),
-					'dots' => esc_html__( 'Dots', 'minera' ),
-					'none' => esc_html__( 'None', 'minera' ),
-				],
-				'frontend_available' => true,
 			]
 		);
 
@@ -167,7 +156,33 @@ class Widget_Minera_carousel extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'arrows', 
+			[
+				'label'   => esc_html__('Show Arrows', 'minera'),
+				'type'   => Controls_Manager::SWITCHER,
+				'default'  => 'hiden',
+				'label_on' => __( 'No', 'minera' ),
+				'label_off' => __( 'Yes', 'minera' ),
+				'return_value' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'dots', 
+			[
+				'label'   => esc_html__('Show Dost', 'minera'),
+				'type'   => Controls_Manager::SWITCHER,
+				'default'  => 'hiden',
+				'label_on' => __( 'No', 'minera' ),
+				'label_off' => __( 'Yes', 'minera' ),
+				'return_value' => 'yes',
+			]
+		);
+
 		$this->end_controls_section();
+
+		$this->slider_controls();
 
 		$this->start_controls_section(
 			'section_additional_options',
@@ -269,17 +284,18 @@ class Widget_Minera_carousel extends Widget_Base {
 			]
 		);
 
+
 		$this->end_controls_section();
+	}
 
-
+	protected function slider_controls() {
 		$this->start_controls_section(
-			'section_style_navigation',
+			'section_style_arrow',
 			[
-				'label' => esc_html__( 'Navigation', 'minera' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'label' => esc_html__( 'Arrows', 'minera' ),
 				'condition' => [
-					'navigation' => [ 'arrows', 'dots', 'both' ],
-				],
+					'arrows'  => 'yes'
+				]
 			]
 		);
 
@@ -289,9 +305,6 @@ class Widget_Minera_carousel extends Widget_Base {
 				'label' => esc_html__( 'Arrows', 'minera' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
-				'condition' => [
-					'navigation' => [ 'arrows', 'both' ],
-				],
 			]
 		);
 
@@ -304,9 +317,6 @@ class Widget_Minera_carousel extends Widget_Base {
 				'options' => [
 					'inside' => esc_html__( 'Inside', 'minera' ),
 					'outside' => esc_html__( 'Outside', 'minera' ),
-				],
-				'condition' => [
-					'navigation' => [ 'arrows', 'both' ],
 				],
 			]
 		);
@@ -325,9 +335,6 @@ class Widget_Minera_carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .slick-prev:before, {{WRAPPER}} .slick-next:before' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
-				'condition' => [
-					'navigation' => [ 'arrows', 'both' ],
-				],
 			]
 		);
 
@@ -339,21 +346,25 @@ class Widget_Minera_carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .slick-prev:before, {{WRAPPER}} .slick-next:before' => 'color: {{VALUE}};',
 				],
-				'condition' => [
-					'navigation' => [ 'arrows', 'both' ],
-				],
 			]
 		);
+		$this->end_controls_section();
 
+		$this->start_controls_section(
+			'section_style_dots',
+			[
+				'label' => esc_html__( 'Dots', 'minera' ),
+				'condition' => [
+					'dots' => 'yes'
+				]
+			]
+		);
 		$this->add_control(
 			'heading_style_dots',
 			[
 				'label' => esc_html__( 'Dots', 'minera' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
-				'condition' => [
-					'navigation' => [ 'dots', 'both' ],
-				],
 			]
 		);
 
@@ -366,9 +377,6 @@ class Widget_Minera_carousel extends Widget_Base {
 				'options' => [
 					'outside' => esc_html__( 'Outside', 'minera' ),
 					'inside' => esc_html__( 'Inside', 'minera' ),
-				],
-				'condition' => [
-					'navigation' => [ 'dots', 'both' ],
 				],
 			]
 		);
@@ -385,10 +393,7 @@ class Widget_Minera_carousel extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-dots li button:before' => 'font-size: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'navigation' => [ 'dots', 'both' ],
+					'{{WRAPPER}} .slick-dots li button:before' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -399,10 +404,7 @@ class Widget_Minera_carousel extends Widget_Base {
 				'label' => esc_html__( 'Dots Color', 'minera' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-dots li button:before' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'navigation' => [ 'dots', 'both' ],
+					'{{WRAPPER}} .slick-dots li button:before' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -547,34 +549,26 @@ class Widget_Minera_carousel extends Widget_Base {
 		);
 
 		$this->end_controls_section();
-
 	}
 
 	protected function render() {
-		$settings = $this->get_settings();
+		$settings = $this->get_settings_for_display();
 
 		if ( empty( $settings['carousel'] ) ) {
 			return;
 		}
 		$this->add_render_attribute( 'carousel', 'class', 'elementor-image-carousel' );
 
-		if ( 'none' !== $settings['navigation'] ) {
-			if ( 'dots' !== $settings['navigation'] ) {
-				$this->add_render_attribute( 'carousel', 'class', 'slick-arrows-' . $settings['arrows_position'] );
-			}
-
-			if ( 'arrows' !== $settings['navigation'] ) {
-				$this->add_render_attribute( 'carousel', 'class', 'slick-dots-' . $settings['dots_position'] );
-			}
-		}
 
 		if ( 'yes' === $settings['image_stretch'] ) {
 			$this->add_render_attribute( 'carousel', 'class', 'slick-image-stretch' );
 		}
 
 		$args = array(
-			"slidesToShow" => '' != $settings['slides_to_show'] ? intval( $settings['slides_to_show'] ) : 4,
-			"slidesToScroll" => intval( $settings['slides_to_scroll'] ),
+			'slidesToShow'   => '' != $settings['slides_to_show'] ? intval( $settings['slides_to_show'] ) : 4,
+			'slidesToScroll' => intval( $settings['slides_to_scroll'] ),
+			'dots'           => 'yes' == $settings['dots'] ? true : false,
+			'arrows'         => 'yes' == $settings['arrows'] ? true : false,
 		);
 
 		$data = "data-slick='" . json_encode( $args ) . "'";
@@ -583,11 +577,13 @@ class Widget_Minera_carousel extends Widget_Base {
 		<div class="carousel-widget"<?php echo $data; ?>>
 			<?php
 				foreach ($settings['carousel'] as $key) {
+					$image_url = Group_Control_Image_Size::get_attachment_image_src( $key['id'], 'thumbnail', $settings );
 				?>
-					<div><img src="<?php echo $key['url']; ?>" alt=""></div>
+					<div><img src="<?php echo $image_url;  ?>" alt=""></div>
 				<?php
 				}
 			?>
+
 		</div>
 		<?php
 

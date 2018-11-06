@@ -118,7 +118,7 @@ function minera_widgets_init() {
 add_action( 'widgets_init', 'minera_widgets_init' );
 
 /***
-header-shop-car
+* header-shop-car
 ***/
 if ( ! function_exists( 'minera_shop_header' ) ) {
   function minera_shop_header() {?>
@@ -138,7 +138,7 @@ if ( ! function_exists( 'minera_shop_header' ) ) {
 
 
 /**
-Logo
+* Logo 
 */
 	if (!function_exists('minera_logo')) {
 		function minera_logo() {
@@ -160,7 +160,7 @@ Logo
 /**
 
 /*
-	add share 
+* add share 
 */
 	function minera_share_with() { ?>
 		<div class="share-product-with">
@@ -250,7 +250,7 @@ if (! function_exists('minera_product')) {
 }
 
 /*
-add description product
+* add description product
 */
 	function minera_description_product(){
 		global $product;

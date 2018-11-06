@@ -50,7 +50,7 @@ form search header js
 /*
 slider
 */
-   jQuery('.slider-for').slick({
+   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,

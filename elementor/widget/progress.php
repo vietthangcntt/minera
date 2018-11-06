@@ -229,12 +229,11 @@ class widget_Minera_progress extends Widget_Base {
 
 		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
 			<div id="thing-demo">
-            	<div class="skin-bar" data-per="<?php echo $settings['percent']['size']; ?>">
+				<div class="skin-bar" data-per="<?php echo $settings['percent']['size']; ?>">
 					<span class="elementor-progress-text"><?php echo $settings['inner_text']; ?></span>
 					<?php if ( 'hiden' != $settings['display_percentage'] ) { ?>
 						<span class="elementor-progress-percentage"><?php echo $settings['percent']['size']; ?>%</span>
 					<?php } ?>
-					</div>
 				</div>
 			</div>
 		</div>
