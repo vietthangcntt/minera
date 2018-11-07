@@ -90,7 +90,9 @@ class Widget_Minera_Shop extends Widget_Base
 			}
 			echo '</div>';
 			wp_reset_postdata();
-			minera_blog_pagination($total_page);
+
+
+			theme_paging( $blogs );
 		} 
 	}
 }

@@ -5679,6 +5679,15 @@ content
   margin-right: 10px;
   font-size: 18px; }
 
+.ht-pagination {
+  text-align: center; }
+
+.page-numbers {
+  padding: 0; }
+  .page-numbers li {
+    display: inline-block;
+    margin-right: 10px; }
+
 .nav-next a {
   color: #333 !important;
   font-family: "Poppins" !important;

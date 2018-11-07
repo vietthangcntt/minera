@@ -78,9 +78,12 @@ class Widget_Minera_Product extends Widget_Base
 			'posts_per_page' => $count,
 			'paged'          => $paged,
 		];
+
 		$products = new \WP_Query($args);
 		$total_page = $products->max_num_pages;
+
 		echo "<ul class='row products columns-".$settings['col']."'>";
+
 		if ($products->have_posts()) {
 			
 		
@@ -89,9 +92,9 @@ class Widget_Minera_Product extends Widget_Base
 				wc_get_template_part('content','product');
 			endwhile;
 			
-			wp_reset_query();
+			wp_reset_postdata();
 			echo "</ul>";
-			minera_product_pagination($total_page);
+			theme_paging( $products );
 		}
 	}
 }

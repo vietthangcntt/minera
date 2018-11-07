@@ -499,53 +499,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Product Pagination
- */
-function minera_product_pagination( $total_page)
-{
-	if ($total_page > 1){
-        $current_page = max(1, get_query_var('paged'));
-        echo '<nav class="pagination">';
-        echo paginate_links(array(
-            'base'         => get_pagenum_link(1) . '%_%',
-            'format'       => '/page/%#%',
-            'current'      => $current_page,
-            'total'        => $total_page,
-            'prev_text'    => esc_html__('«'),
-            'next_text'    => esc_html__('»'),
-            'end_size'     => 3,
-            'mid_size'     => 3
-        ));
-        echo '</nav>';
-    }
-}
 
 /**
- * blogs Pagination
+* number cart
  */
-function minera_blog_pagination( $total_page)
-{
-	if ($total_page > 1){
-        $current_page = max(1, get_query_var('paged'));
-        echo '<nav class="pagination">';
-        echo paginate_links(array(
-            'base'         => get_pagenum_link(1) . '%_%',
-            'format'       => '../page/%#%',
-            'current'      => $current_page,
-            'total'        => $total_page,
-            'prev_text'    => esc_html__('«'),
-            'next_text'    => esc_html__('»'),
-            'end_size'     => 3,
-            'mid_size'     => 3
-        ));
-        echo '</nav>';
-    }
-}
-
-
 add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
-
 function iconic_cart_count_fragments( $fragments ) {
     
     global $woocommerce;
@@ -560,5 +518,60 @@ function iconic_cart_count_fragments( $fragments ) {
 
     return $fragments;
     
+}
+
+/**
+ *  Pagination
+ */
+if ( ! function_exists( 'theme_paging' ) ) {
+    function theme_paging( $wp_query = null, $paged = null ) {
+
+        if ( ! $wp_query ) {
+            $wp_query = $GLOBALS['wp_query'];
+        }
+
+        /*Don't print empty markup if there's only one page.*/
+
+        if ( $wp_query->max_num_pages < 2 ) return;
+
+        if ( null == $paged ) {
+            $paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+        }
+        $pagenum_link = html_entity_decode( get_pagenum_link() );
+        $query_args   = array();
+        $url_parts    = explode( '?', $pagenum_link );
+
+        if ( isset( $url_parts[1] ) ) {
+            wp_parse_str( $url_parts[1], $query_args );
+        }
+
+        $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+        $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+        $format = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+        $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+        /*Set up paginated links.*/
+        $links = paginate_links( array(
+            'base'      => $pagenum_link,
+            'format'    => $format,
+            'total'     => $wp_query->max_num_pages,
+            'current'   => $paged,
+            'mid_size'  => 1,
+            'add_args'  => array_map( 'urlencode', $query_args ),
+            'prev_text' => sprintf( esc_html_x( '%s Prev', 'Pagination previous button', 'minera' ), '<span class="fa fa-angle-double-left"></span>' ),
+            'next_text' => sprintf( esc_html_x( 'Next %s', 'Pagination next button', 'minera' ), '<span class="fa fa-angle-double-right"></span>' ),
+            'type'      => 'list'
+        ) );
+
+        if ( $links ):
+        ?>
+            <nav class="ht-pagination">
+                <span class="screen-reader-text"><?php esc_html_e( 'Posts pagination', 'minera' ); ?></span>
+                <?php echo wp_kses_post( $links ); ?>
+            </nav>
+        <?php
+        endif;
+    }
 }
 
