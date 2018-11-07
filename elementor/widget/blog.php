@@ -40,10 +40,29 @@ class Widget_Minera_Shop extends Widget_Base
 	}
 	protected function render()
 	{	
-		if ( have_posts() ) :
-				the_post();
-				get_template_part( 'index' );
-		endif; 
+		$settings = $this-> get_settings_for_display();
+		$args = [
+			'post' => 'blogs',
+		];
+		$blogs = new \WP_Query( $args );
+
+		// The Loop
+		if ( $blogs->have_posts() ) {
+			echo '<div>';
+			while ( $blogs->have_posts() ) {
+				$blogs->the_post();
+				echo "<a>" .get_the_post_thumbnail();
+				echo "</a>";
+				echo "<h2>" .get_the_title();
+				echo "</h2>";
+				echo "<div>" .the_content();
+				echo "</div>";
+				
+			}
+			echo '</div>';
+			/* Restore original Post Data */
+			wp_reset_postdata();
+} 
 	}
 }
 Plugin::instance()->widgets_manager->register_widget_type( new Widget_Minera_Shop() );
