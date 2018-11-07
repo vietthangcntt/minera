@@ -301,9 +301,9 @@ function woo_rename_tabs( $tabs ) {
 
 }
 
-	/*
+/*
  * add Read More 
- */
+*/
 	function minera_readmore() {
 		return 
 		'<div class="read">
@@ -520,6 +520,29 @@ function minera_product_pagination( $total_page)
         echo '</nav>';
     }
 }
+
+/**
+ * blogs Pagination
+ */
+function minera_blog_pagination( $total_page)
+{
+	if ($total_page > 1){
+        $current_page = max(1, get_query_var('paged'));
+        echo '<nav class="pagination">';
+        echo paginate_links(array(
+            'base'         => get_pagenum_link(1) . '%_%',
+            'format'       => '../page/%#%',
+            'current'      => $current_page,
+            'total'        => $total_page,
+            'prev_text'    => esc_html__('«'),
+            'next_text'    => esc_html__('»'),
+            'end_size'     => 3,
+            'mid_size'     => 3
+        ));
+        echo '</nav>';
+    }
+}
+
 
 add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
 

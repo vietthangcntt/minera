@@ -14,7 +14,35 @@
 #content {
 	padding: 70px 0;
 }
+.nav-previous {
+	a {
+		color: $color-black;
+		font-family: $font;
+		font-size: 16px;
+		font-weight: $weight;
+	}
+	:before {
+		content: "\f104";
+		font-family: $font-awe;
+		margin-right: 10px;
+		font-size: 18px;
+	}
+}
 
+.nav-next {
+	a {
+		color: $color-black;
+		font-family: $font;
+		font-size: 16px;
+		font-weight: $weight;
+	}
+	:after {
+		content: "\f105";
+		font-family: $font-awe;
+		margin-left: 10px;
+		font-size: 18px;
+	}
+}
 .p-head {
     float: left;
     position: relative;

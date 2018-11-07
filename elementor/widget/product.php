@@ -62,8 +62,8 @@ class Widget_Minera_Product extends Widget_Base
 					'3' => 3,
 					'4' => 4,
 					'5' => 5,
-					'6' => 6
-				]
+					'6' => 6,
+				],
 			]
 		);
 		$this->end_controls_section();

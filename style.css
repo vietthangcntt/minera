@@ -5668,6 +5668,28 @@ content
 #content {
   padding: 70px 0; }
 
+.nav-previous a {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 16px;
+  font-weight: 400 !important; }
+.nav-previous :before {
+  content: "\f104";
+  font-family: FontAwesome;
+  margin-right: 10px;
+  font-size: 18px; }
+
+.nav-next a {
+  color: #333 !important;
+  font-family: "Poppins" !important;
+  font-size: 16px;
+  font-weight: 400 !important; }
+.nav-next :after {
+  content: "\f105";
+  font-family: FontAwesome;
+  margin-left: 10px;
+  font-size: 18px; }
+
 .p-head {
   float: left;
   position: relative; }

@@ -36,37 +36,62 @@ class Widget_Minera_Shop extends Widget_Base
 				'label'   => esc_html__( 'Blogs', 'minera' ),
 			]
 		);
+		$this->add_control(
+			'number_post',
+			[
+				'label' => esc_html__('Number Post' , 'minera'),
+				'type'  => Controls_Manager:: SELECT,
+				'default' => '2',
+				'options' => [
+					'1' => '1',
+					'2' => '2',
+					'3' => '3',
+					'4' => '4',
+					'5' => '5',
+					'6' => '6',
+				],
+			]
+		);
+
+
 		$this->end_controls_section();
+
 	}
 	protected function render()
 	{	
 		$settings = $this-> get_settings_for_display();
+		$count    = $settings['number_post'];
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$args = [
 			'post' => 'blogs',
+			'posts_per_page' => $count,
+			'paged'          => $paged,
 		];
 		$blogs = new \WP_Query( $args );
-
-		// The Loop
+		$total_page = $blogs->max_num_pages;
 		if ( $blogs->have_posts() ) {
 			echo '<div>';
 			while ( $blogs->have_posts() ) {
 				$blogs->the_post();
-				echo "<a>" .get_the_post_thumbnail();
-				echo "</a>";
-				echo "<div class'entry-meta'>";
-				echo minera_posted_on();
-				echo minera_posted_by();
-				echo "</div>";
-				echo "<h2>" .get_the_title();
-				echo "</h2>";
-				echo "<div>" .the_content();
-				echo "</div>";
+				?>
+					<a> <?php echo get_the_post_thumbnail(); ?> </a>
+					<h2> <?php echo get_the_title(); ?> </h2>
+					<div class="entry-meta">
+						<?php
+							minera_posted_on();
+							minera_posted_by();
+						?>
+					</div>
+					<div class="decription">
+						<?php echo the_content(); ?>
+					</div>
+				<?php
 				
 			}
 			echo '</div>';
-			/* Restore original Post Data */
 			wp_reset_postdata();
-} 
+			minera_blog_pagination($total_page);
+		} 
 	}
 }
 Plugin::instance()->widgets_manager->register_widget_type( new Widget_Minera_Shop() );
