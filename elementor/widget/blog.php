@@ -53,6 +53,10 @@ class Widget_Minera_Shop extends Widget_Base
 				$blogs->the_post();
 				echo "<a>" .get_the_post_thumbnail();
 				echo "</a>";
+				echo "<div class'entry-meta'>";
+				echo minera_posted_on();
+				echo minera_posted_by();
+				echo "</div>";
 				echo "<h2>" .get_the_title();
 				echo "</h2>";
 				echo "<div>" .the_content();
